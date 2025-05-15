@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Store</title>
+  <link rel="stylesheet" type="text/css" href="../css/nav-footer.css">
+  <link rel="stylesheet" type="text/css" href="../css/prod-list.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../images/shop-logo.png" alt="Arman Salon Logo">
+                <span class="logo-text">ARMAN SALON</span>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links" id="nav-column">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <div class="dropdown">
+                    <a href="../product.html">Products</a>
+                    <div class="dropdown-content">
+                        <a href="prod-list1.html">Store</a>
+                    </div>
+                </div>
+                <a href="../services.html">Services</a>
+                <a href="../contacts.html">Contacts</a>
+                <a href="../faq.html">FAQ</a>
+            </div>
+            <div class="nav-icons" id="nav-column1">
+                <a href="#"><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
+                <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
+            </div>
+        </nav>  
+        <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
+        <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>          
+    </header>
+
+  <main>
+    <section>
+      <h1 class="section-title">Our Premium Products</h1>
+      <p class="section-subtitle">Luxury Beauty Essentials</p>
+      <div class="products-container">
+            <div class="categories">
+                <div class="category">
+                    <h3>NAILS</h3>
+                    <ul>
+                        <li><a href="prod-list1.html">Nail Polish</a></li>
+                        <li><a href="prod-list2.html">Nail Strengthener</a></li>
+                        <li><a  href="prod-list3.html">Cuticle Oil</a></li>
+                        <li><a href="prod-list4.html">Nail Polish Remover</a></li>
+                        <li><a href="prod-list5.html">Nail File & Buffers</a></li>
+                        <li><a href="prod-list6.html">Nail Art Accesories</a></li>
+                        <li><a href="prod-list7.html">Base & Top Coat</a></li>
+                        <li><a href="prod-list8.html">Nail Clippers & Tools</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>HAIR</h3>
+                    <ul>
+                        <li><a href="prod-list9.html">Shampoo</a></li>
+                        <li><a href="prod-list10.html">Conditioner</a></li>
+                        <li><a href="prod-list11.html">Hair Mask</a></li>
+                        <li><a href="prod-list12.html">Hair Oil</a></li>
+                        <li><a href="prod-list13.html">Hair Spray</a></li>
+                        <li><a href="prod-list14.html">Hair Mousse</a></li>
+                        <li><a href="prod-list15.html">Hair Color</a></li>
+                        <li><a href="prod-list16.html">Hair Gel</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>SKINCARE</h3>
+                    <ul>
+                        <li><a href="prod-list17.html">Cleansers</a></li>
+                        <li><a href="prod-list18.html">Moisturizer</a></li>
+                        <li><a href="prod-list19.html">Toner</a></li>
+                        <li><a href="prod-list20.html">Serum</a></li>
+                        <li><a href="prod-list21.html">Sunscreen</a></li>
+                        <li><a href="prod-list22.html">Face Mask</a></li>
+                        <li><a href="prod-list23.html">Lip Care</a></li>
+                        <li><a href="prod-list24.html">Eyelash Care</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="prod-img/n_oil1.webp" alt="CND SolarOil">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">CND</div>
+                        <div class="product-name">SolarOil</div>
+                        <div class="product-price">
+                            <span class="price">₱ 571.00</span>
+                            <span class="sold">86 SOLD</span>
+                        </div>
+                        <a href="../product-view\product-9.html"class="add-to-cart">VIEW PRODUCT</a>      
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="prod-img/n_oil2.avif" alt="Burt’s Bees Lemon Butter Cuticle Cream">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Burt’s Bees </div>
+                        <div class="product-name">Lemon Butter Cuticle Cream</div>
+                        <div class="product-price">
+                            <span class="price">₱ 773.00</span>
+                            <span class="sold">29 SOLD</span>
+                        </div>
+                        <a href="../product-view\product-10.html"class="add-to-cart">VIEW PRODUCT</a>      
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="prod-img/n_oil3.webp" alt="Essie Apricot Cuticle Oil">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Essie</div>
+                        <div class="product-name">Apricot Cuticle Oil</div>
+                        <div class="product-price">
+                            <span class="price">₱ 609.00</span>
+                            <span class="sold">49 SOLD</span>
+                        </div>
+                        <a href="../product-view\product-11.html"class="add-to-cart">VIEW PRODUCT</a>      
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="prod-img/n_oil4.jpeg" alt="SALLY HANSEN Vitamin E nail & cuticle Oil">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">SALLY HANSEN</div>
+                        <div class="product-name">Vitamin E nail & cuticle Oil</div>
+                        <div class="product-price">
+                            <span class="price">₱ 373.00</span>
+                            <span class="sold">114 SOLD</span>
+                        </div>
+                        <a href="../product-view\product-12.html"class="add-to-cart">VIEW PRODUCT</a>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+   <footer>
+        <div class="footer-section">
+            <h3>Information</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms and Services</a></li>
+                <li><a href="#">Privacy and Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="#">Nails</a></li>
+                <li><a href="#">Hair</a></li>
+                <li><a href="#">Skincare</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Manicure</a></li>
+                <li><a href="#">Hair</a></li>
+                <li><a href="#">Pedicure</a></li>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Eyelash</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Stay Connected</h3>
+            <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+            <form class="subscription-form">
+                <input type="email" placeholder="Your Email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section">
+        </div>
+        <div class="footer-section">
+            <h3>Visit Us</h3>
+            <p>123 Elegance Avenue</p>
+            <p>Luxury District, City</p>
+            <p>ZIP Code</p>
+        </div>
+        <div class="footer-section">
+            <h3>Hours & Services</h3>
+            <p>Monday - Friday: 8:00AM - 7:00PM</p>
+            <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
+            <ul>
+                <li><a href="#">Nails</a></li>
+                <li><a href="#">Hair</a></li>
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Eyelash</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="script\script.js"></script>
+</html>
