@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" type="text/css" href="css\nav-footer.css">
+    <link rel="stylesheet" type="text/css" href="css\product.css">
+    <link rel="stylesheet" type="text/css" href="css\modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/shop-logo.png" alt="Arman Salon Logo">
+            <span class="logo-text">ARMAN SALON</span>
+        </div>
+    </div>
+    <nav>
+        <div class="nav-links" id="nav-column">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="product.html">Products</a>
+                <div class="dropdown-content">
+                    <a href="prod-list/prod-list1.html">Store</a>
+                </div>
+            </div>
+            <a href="services.html">Services</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div class="nav-icons" id="nav-column1">
+            <a href="#"><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
+            <a href="cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+        </div>
+    </nav>  
+    <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
+    <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>           
+    </header>
+    <main>
+                    <div class="user-profile-modal">
+                <div class="modal-header">
+                    <div class="logo">
+                        <img src="images/shop-logo.png" alt="Arman Salon Logo" />
+                    </div>
+                    <button class="close-button">×</button>
+                </div>
+                <div class="user-content">
+                    <div class="user-avatar">
+                        <div class="avatar-image">
+                            <img src="images/user.png">
+                        </div>
+                        <div class="username">Username</div>
+                    </div>
+                    
+                    <div class="user-details">
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Mobile Number</div>
+                                <div class="detail-value">090909</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Email Address</div>
+                                <div class="detail-value">email@mail.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Address</div>
+                                <div class="detail-value">7111 St.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider-modal"></div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-modal btn-modal-outline">Log Out</button>
+                        <a href="#" class="btn-modal btn-modal-primary">Payment Methods</a>
+                    </div>
+                    
+                    <button class="edit-profile">Edit Profile →</button>
+                </div>
+            </div>
+        <!-- Login Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="close-btn">×</button>
+            
+            <div class="login-container">
+                <div class="modal-header">
+                    <div class="modal-logo">
+                        <img src="images/shop-logo.png" class="logo">
+                        <h2 class="form-title" id="modal-title">LOGIN</h2>
+                    </div>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="login-form" id="loginForm">
+                    <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
+                    
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                    
+                    <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Email/Username</label>
+                            <input type="text" class="form-input" placeholder="Enter your email or username">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-input" placeholder="Enter your password">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember" class="remember-checkbox">
+                                <label for="remember" class="remember-text">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">LOGIN</button>
+                    </form>
+                </div>
+                
+                <!-- Signup Form (hidden by default) -->
+                <div class="signup-form" id="signupForm">
+                    <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
+                    
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                    
+                    <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-input" placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-input" placeholder="Create a password">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" class="form-input" placeholder="Confirm your password">
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">SIGN UP</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="signup-container" id="sidebarContainer">
+                <div class="signup-cta" id="loginSidebar">
+                    <h3 class="signup-title">NEW HERE?</h3>
+                    <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
+                    <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+                </div>
+                
+                <div class="signup-cta" id="signupSidebar" style="display: none;">
+                    <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+                    <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
+                    <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <section class="internal-nav-section">
+            <h2 class="internal-nav-title">Product Categories</h2>
+            <div class="internal-nav">
+            <a href="#nails" class="nail-a"><img src="images/manicure.png" alt="nails icon"></a>
+            <a href="#hair" class="hair-a"><img src="images/hair.png" alt="hair icon"></a>
+            <a href="#skincare" class="skincare-a"><img src="images/pedicure.png" alt="skincare icon"></a>
+            </div>
+        </section>
+
+        <section class="products-section" id="nails">
+            <h2 class="products-title">Nails Products</h2>
+            <div class="divider"></div>
+            <div class="products-grid">
+            <div class="products-card">
+                <img src="prod-list/prod-img/n_polish2.jpg" alt="Nail Polish">
+                <div class="card-content">
+                <h3>Nail Polish</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list1.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/n_str1.webp" alt="Nail Strengthener">
+                <div class="card-content">
+                <h3>Nail Strengthener</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list2.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/n_oil4.jpeg" alt="Cuticle Oil">
+                <div class="card-content">
+                <h3>Cuticle Oil</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list3.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/pol_rem1.jpg" alt="Nails Polish Remover">
+                <div class="card-content">
+                <h3>Nails Polish Remover</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list4.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/n_filer1.webp" alt="Nail File & Buffers">
+                <div class="card-content">
+                <h3>Nail File & Buffers</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list5.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/n_sticker4.webp" alt="Nail Art Accesories">
+                <div class="card-content">
+                <h3>Nail Art Accesories</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list6.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/n_coat2.webp" alt="Base & Top Coat">
+                <div class="card-content">
+                <h3>Base & Top Coat</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list7.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/n_twe3.webp" alt="Nail Clippers & Tools">
+                <div class="card-content">
+                <h3>Nail Clippers & Tools</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list8.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="products-section" id="hair">
+            <h2 class="products-title">Hair Products</h2>
+            <div class="divider"></div>
+            <div class="products-grid">
+            <div class="products-card">
+                <img src="prod-list/prod-img/shamp2.webp" alt="Shampoo">
+                <div class="card-content">
+                <h3>Shampoo</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list9.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/cond1.jpg" alt="Conditioner">
+                <div class="card-content">
+                <h3>Conditioner</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list10.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/mask3.webp" alt="Hair Mask">
+                <div class="card-content">
+                <h3>Hair Mask</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list11.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/H_oil1.webp" alt="Hair Oil">
+                <div class="card-content">
+                <h3>Hair Oil</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list12.html"tton class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/spray3.webp" alt="Hair Spray">
+                <div class="card-content">
+                <h3>Hair Spray</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list13.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/Mousse4.webp" alt="Hair Mousse">
+                <div class="card-content">
+                <h3>Hair Mousse</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list14.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/h_gcolor1.avif" alt="Hair Color">
+                <div class="card-content">
+                <h3>Hair Color</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list15.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/h_gel3.webp" alt="Hair Gel">
+                <div class="card-content">
+                <h3>Hair Gel</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list16.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="products-section" id="skincare">
+            <h2 class="products-title">Skincare Products</h2>
+            <div class="divider"></div>
+            <div class="products-grid">
+            <div class="products-card">
+                <img src="prod-list/prod-img/cleanser4.avif" alt="Cleanser">
+                <div class="card-content">
+                <h3>Cleanser</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list17.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/moist1.avif" alt="Moisturizer">
+                <div class="card-content">
+                <h3>Moisturizer</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list18.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/toner4.avif" alt="Toner">
+                <div class="card-content">
+                <h3>Toner</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list19.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/serum4.avif" alt="Serum">
+                <div class="card-content">
+                <h3>Serum</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list20.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/sunsc1.avif" alt="Sunscreen">
+                <div class="card-content">
+                <h3>Sunscreen</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list21.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/f_mask2.avif" alt="Face Mask">
+                <div class="card-content">
+                <h3>Face Mask</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list22.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/lip3.avif" alt="Lip Care">
+                <div class="card-content">
+                <h3>Lip Care</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list23.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            <div class="products-card">
+                <img src="prod-list/prod-img/eyelash1.avif" alt="Eyelash Care">
+                <div class="card-content">
+                <h3>Eyelash Care</h3>
+                <div>
+                    <span></span>
+                    <a href="prod-list/prod-list24.html" class="shop-btn">Shop Now</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+<footer>
+    <div class="footer-section">
+        <h3>Information</h3>
+        <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html">Terms and Services</a></li>
+            <li><a href="faq.html">Privacy and Policy</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+            <li><a href="product.html#nails">Nails</a></li>
+            <li><a href="product.html#hair">Hair</a></li>
+            <li><a href="product.html#skincare">Skincare</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="services.html#manicure">Manicure</a></li>
+            <li><a href="services.html#hair">Hair</a></li>
+            <li><a href="services.html#pedicure">Pedicure</a></li>
+            <li><a href="services.html#makeup">Makeup</a></li>
+            <li><a href="services.html#eyelashes">Eyelash</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+        <form class="subscription-form">
+            <input type="email" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div class="footer-section">
+    </div>
+    <div class="footer-section">
+        <h3>Visit Us</h3>
+        <p>123 Elegance Avenue</p>
+        <p>Luxury District, City</p>
+        <p>ZIP Code</p>
+    </div>
+    <div class="footer-section">
+        <h3>Working Hours</h3>
+        <p>Monday - Friday: 8:00AM - 7:00PM</p>
+        <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
+    </div>
+  </footer>
+</body>
+<script src="script/script.js"></script>
+</html>
