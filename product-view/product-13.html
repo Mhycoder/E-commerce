@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nav-footer.css">
+    <link rel="stylesheet" href="../css/product-view.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Product Name</title>
+</head>
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="../images/shop-logo.png" alt="Arman Salon Logo">
+            <span class="logo-text">ARMAN SALON</span>
+        </div>
+    </div>
+    <nav>
+        <div class="nav-links" id="nav-column">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <div class="dropdown">
+                <a href="../product.html">Products</a>
+                <div class="dropdown-content">
+                    <a href="../prod-list/prod-list1.html">Store</a>
+                </div>
+            </div>
+            <a href="../services.html">Services</a>
+            <a href="../contacts.html">Contacts</a>
+            <a href="../faq.html">FAQ</a>
+        </div>
+        <div class="nav-icons" id="nav-column1">
+            <a href="#"><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
+            <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
+        </div>
+    </nav>  
+    <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
+    <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>           
+    </header>
+    <main>
+        <!-- Login Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-container">
+                <button class="close-btn">×</button>
+                
+                <div class="login-container">
+                    <div class="modal-header">
+                        <div class="modal-logo">
+                            <img src="../images/shop-logo.png" class="logo">
+                            <h2 class="form-title" id="modal-title">LOGIN</h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Login Form -->
+                    <div class="login-form" id="loginForm">
+                        <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
+                        
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="../images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="../images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="../images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                        
+                        <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Email/Username</label>
+                                <input type="text" class="form-input" placeholder="Enter your email or username">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Enter your password">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember" class="remember-checkbox">
+                                    <label for="remember" class="remember-text">Remember me</label>
+                                </div>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">LOGIN</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Signup Form (hidden by default) -->
+                    <div class="signup-form" id="signupForm">
+                        <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
+                        
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="../images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="../images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="../images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                        
+                        <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Create a password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="password" class="form-input" placeholder="Confirm your password">
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">SIGN UP</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="signup-container" id="sidebarContainer">
+                    <div class="signup-cta" id="loginSidebar">
+                        <h3 class="signup-title">NEW HERE?</h3>
+                        <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
+                        <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+                    </div>
+                    
+                    <div class="signup-cta" id="signupSidebar" style="display: none;">
+                        <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+                        <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
+                        <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-view">
+            <div class="breadcrumb">
+                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#nails">NAILS</a> <span>/</span> <a href="../prod-list\prod-list4.html">NAIL POLISH REMOVER</a> <span>/</span>  ZOYA REMOVE PLUS
+            </div>
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="../prod-list\prod-img/pol_rem1.jpg" alt="Zoya Remove Plus">
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumbnail active">
+                            <img src="../prod-list\prod-img/pol_rem1.jpg" alt="picture angle 1">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="../prodview-img/pol_rem1-1.jpg" alt="picture angle 2">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="../prodview-img/pol_rem1-2.jpg" alt="picture angle 3">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="../prodview-img/pol_rem1-3.jpg" alt="picture angle 3">
+                        </div>
+                    </div>
+                    <div class="share">
+                        <div class="share-label">SHARE:</div>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" class="social-icon">
+                                <img src="../images/facebook.png" alt="facebook">
+                            </a>
+                            <a href="https://www.instagram.com/" class="social-icon">
+                                <img src="../images/instagram.webp" alt="instagram">
+                            </a>
+                            <a href="https://x.com/" class="social-icon">
+                                <img src="../images/x-twitter.jpg" alt="x twitter">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title">Zoya Remove Plus</h1>
+                    <div class="product-price">₱ 664.00</div>
+                    
+                    <div class="product-meta">
+                        <div class="meta-row description-column">
+                            <div class="meta-label">DESCRIPTION:</div>
+                            <p>Zoya Remove Plus is an award winning, gentle, yet highly effective 3-in-1 nail polish remover, nail prep and nail conditioner. Longer nail polish wear starts with Remove Plus. Now get Zoya Remove Plus packaged in the portable, spill-proof 8oz Big Flipper.</p>
+                        </div>
+                        <div class="meta-row">
+                            <div class="meta-label">SHIPPING:</div>
+                            <p>2-3 Days</p>
+                        </div>
+                        
+                        <div class="meta-row">
+                            <div class="meta-label">OPTION:</div>
+                            <div class="meta-value">
+                                <div class="size-options">
+                                    <div class="size-option">240 ml</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="meta-row">
+                            <div class="meta-label">QUANTITY:</div>
+                            <div class="meta-value">
+                                <div class="quantity-selector">
+                                    <button class="quantity-button">-</button>
+                                    <input type="text" class="quantity-input" value="1">
+                                    <button class="quantity-button">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn btn-primary">ADD TO CART</button>
+                        <button class="btn btn-secondary">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+  <footer>
+      <div class="footer-section">
+          <h3>Information</h3>
+          <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms and Services</a></li>
+              <li><a href="#">Privacy and Policy</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+              <li><a href="#">Nails</a></li>
+              <li><a href="#">Hair</a></li>
+              <li><a href="#">Skincare</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+              <li><a href="#">Manicure</a></li>
+              <li><a href="#">Hair</a></li>
+              <li><a href="#">Pedicure</a></li>
+              <li><a href="#">Makeup</a></li>
+              <li><a href="#">Eyelash</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Stay Connected</h3>
+          <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+          <form class="subscription-form">
+              <input type="email" placeholder="Your Email">
+              <button type="submit">Subscribe</button>
+          </form>
+      </div>
+      <div class="footer-section">
+      </div>
+      <div class="footer-section">
+          <h3>Visit Us</h3>
+          <p>123 Elegance Avenue</p>
+          <p>Luxury District, City</p>
+          <p>ZIP Code</p>
+      </div>
+      <div class="footer-section">
+          <h3>Working Hours</h3>
+          <p>Monday - Friday: 8:00AM - 7:00PM</p>
+          <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
+      </div>
+  </footer>
+</body>
+<script src="../script/script.js"></script>
+</html>
