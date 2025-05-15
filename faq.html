@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav-footer.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>FAQ</title>
+</head>
+
+<body>
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/shop-logo.png" alt="Arman Salon Logo">
+            <span class="logo-text">ARMAN SALON</span>
+        </div>
+    </div>
+    <nav>
+        <div class="nav-links" id="nav-column">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="product.html">Products</a>
+                <div class="dropdown-content">
+                    <a href="prod-list/prod-list1.html">Store</a>
+                </div>
+            </div>
+            <a href="services.html">Services</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div class="nav-icons" id="nav-column1">
+            <a href="#"><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
+            <a href="cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+        </div>
+    </nav>  
+    <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
+    <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>           
+    </header>
+
+  <main>
+                <div class="user-profile-modal">
+                <div class="modal-header">
+                    <div class="logo">
+                        <img src="images/shop-logo.png" alt="Arman Salon Logo" />
+                    </div>
+                    <button class="close-button">×</button>
+                </div>
+                <div class="user-content">
+                    <div class="user-avatar">
+                        <div class="avatar-image">
+                            <img src="images/user.png">
+                        </div>
+                        <div class="username">Username</div>
+                    </div>
+                    
+                    <div class="user-details">
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Mobile Number</div>
+                                <div class="detail-value">090909</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Email Address</div>
+                                <div class="detail-value">email@mail.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Address</div>
+                                <div class="detail-value">7111 St.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider-modal"></div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-modal btn-modal-outline">Log Out</button>
+                        <a href="#" class="btn-modal btn-modal-primary">Payment Methods</a>
+                    </div>
+                    
+                    <button class="edit-profile">Edit Profile →</button>
+                </div>
+            </div>
+        <!-- Login Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-container">
+                <button class="close-btn">×</button>
+                
+                <div class="login-container">
+                    <div class="modal-header">
+                        <div class="modal-logo">
+                            <img src="images/shop-logo.png" class="logo">
+                            <h2 class="form-title" id="modal-title">LOGIN</h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Login Form -->
+                    <div class="login-form" id="loginForm">
+                        <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
+                        
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                        
+                        <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Email/Username</label>
+                                <input type="text" class="form-input" placeholder="Enter your email or username">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Enter your password">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember" class="remember-checkbox">
+                                    <label for="remember" class="remember-text">Remember me</label>
+                                </div>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">LOGIN</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Signup Form (hidden by default) -->
+                    <div class="signup-form" id="signupForm">
+                        <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
+                        
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                        
+                        <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Create a password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="password" class="form-input" placeholder="Confirm your password">
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">SIGN UP</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="signup-container" id="sidebarContainer">
+                    <div class="signup-cta" id="loginSidebar">
+                        <h3 class="signup-title">NEW HERE?</h3>
+                        <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
+                        <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+                    </div>
+                    
+                    <div class="signup-cta" id="signupSidebar" style="display: none;">
+                        <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+                        <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
+                        <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="page-title">
+        <h1>Frequently Asked Questions</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search for answers..." />
+        </div>
+    </div>
+
+    <div class="faq-grid">
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq1.jpg" alt="Calendar Icon" />
+            </div>
+            <h3>Salon Hours</h3>
+            <p>Monday-Friday: 9:00AM-9:00PM<br>
+            Saturday and Sunday: 9:00AM-7:00PM<br><br>
+            The Arman Salon team is not available on Thanksgiving Day, Christmas, and New Year's Day.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq2.jpg" alt="Shipping Icon" />
+            </div>
+            <h3>Order Processing</h3>
+            <p>Once your order is placed, it generally takes 1-2 business days to process and pick. For expedited or overnight shipping, orders placed before 12:00 PM PT, Monday through Friday, will typically ship the same day.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq3.jpg" alt="Package Icon" />
+            </div>
+            <h3>Shipping Notifications</h3>
+            <p>We will email you a shipment notification along with a tracking number as soon as your package ships.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq4.jpg" alt="Phone Icon" />
+            </div>
+            <h3>Contact Us</h3>
+            <p>Please contact us right away at 1-888-987-7273 or<br>
+            arman_salon@gmail.com</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq5.jpg" alt="Return Box Icon" />
+            </div>
+            <h3>Returns Policy</h3>
+            <p>U.S. returns are free within 30 days. Note you are allowed 1 exchange on your original order. International orders are final—no returns or exchanges. Shipping and duties are non-refundable.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq6.jpg" alt="Calendar X Icon" />
+            </div>
+            <h3>Appointment Cancellations</h3>
+            <p>We kindly ask that you give at least 24 hours' notice for cancellations or rescheduling to avoid a cancellation fee.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq7.jpg" alt="Calendar Check Icon" />
+            </div>
+            <h3>Booking Appointments</h3>
+            <p>We recommend booking an appointment to ensure availability, but we also accept walk-ins based on stylist availability.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq8.jpg" alt="Credit Card Icon" />
+            </div>
+            <h3>No Additional Fees</h3>
+            <p>No, there will be no additional charges if you select this mode of payment or even PayPal payment option.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq9.jpg" alt="Payment Icon" />
+            </div>
+            <h3>Payment Methods</h3>
+            <p>Arman Salon accepts online payment such as PayPal, Visa, MasterCard, and Credit Card. For those who do not want to pay online, Money and Bank transfer are also available.</p>
+        </div>
+        
+        <div class="faq-card">
+            <div class="icon-container">
+                <img src="images/faq10.jpg" alt="Product Icon" />
+            </div>
+            <h3>Our Products</h3>
+            <p>We use high-quality, professional-grade products, including L'Oréal Professionnel, chosen to ensure the best results for your hair and skin.</p>
+        </div>
+    </div>
+  </main>
+<footer>
+    <div class="footer-section">
+        <h3>Information</h3>
+        <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html">Terms and Services</a></li>
+            <li><a href="faq.html">Privacy and Policy</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+            <li><a href="product.html#nails">Nails</a></li>
+            <li><a href="product.html#hair">Hair</a></li>
+            <li><a href="product.html#skincare">Skincare</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="services.html#manicure">Manicure</a></li>
+            <li><a href="services.html#hair">Hair</a></li>
+            <li><a href="services.html#pedicure">Pedicure</a></li>
+            <li><a href="services.html#makeup">Makeup</a></li>
+            <li><a href="services.html#eyelashes">Eyelash</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+        <form class="subscription-form">
+            <input type="email" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div class="footer-section">
+    </div>
+    <div class="footer-section">
+        <h3>Visit Us</h3>
+        <p>123 Elegance Avenue</p>
+        <p>Luxury District, City</p>
+        <p>ZIP Code</p>
+    </div>
+    <div class="footer-section">
+        <h3>Working Hours</h3>
+        <p>Monday - Friday: 8:00AM - 7:00PM</p>
+        <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
+    </div>
+  </footer>
+</body>
+<script src="script/script.js"></script>
+</html>

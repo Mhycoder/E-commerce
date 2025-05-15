@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" type="text/css" href="css/nav-footer.css">
+  <link rel="stylesheet" type="text/css" href="css/services.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+          <img src="images/shop-logo.png" alt="Arman Salon Logo">
+          <span class="logo-text">ARMAN SALON</span>
+      </div>
+    </div>
+    <nav>
+        <div class="nav-links" id="nav-column">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="product.html">Products</a>
+                <div class="dropdown-content">
+                    <a href="prod-list/prod-list1.html">Store</a>
+                </div>
+            </div>
+            <a href="services.html">Services</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div class="nav-icons" id="nav-column1">
+            <a href="#"><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
+            <a href="cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+        </div>
+    </nav>  
+    <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
+    <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>           
+  </header>
+
+  <main>
+                <div class="user-profile-modal">
+                <div class="modal-header">
+                    <div class="logo">
+                        <img src="images/shop-logo.png" alt="Arman Salon Logo" />
+                    </div>
+                    <button class="close-button">×</button>
+                </div>
+                <div class="user-content">
+                    <div class="user-avatar">
+                        <div class="avatar-image">
+                          <img src="images/user.png">
+                        </div>
+                        <div class="username">Username</div>
+                    </div>
+                    
+                    <div class="user-details">
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Mobile Number</div>
+                                <div class="detail-value">090909</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Email Address</div>
+                                <div class="detail-value">email@mail.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Address</div>
+                                <div class="detail-value">7111 St.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider-modal"></div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-modal btn-modal-outline">Log Out</button>
+                        <a href="#" class="btn-modal btn-modal-primary">Payment Methods</a>
+                    </div>
+                    
+                    <button class="edit-profile">Edit Profile →</button>
+                </div>
+            </div>
+        <!-- Login Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-container">
+                <button class="close-btn">×</button>
+                
+                <div class="login-container">
+                    <div class="modal-header">
+                        <div class="modal-logo">
+                            <img src="images/shop-logo.png" class="logo">
+                            <h2 class="form-title" id="modal-title">LOGIN</h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Login Form -->
+                    <div class="login-form" id="loginForm">
+                        <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
+                        
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                        
+                        <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Email/Username</label>
+                                <input type="text" class="form-input" placeholder="Enter your email or username">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Enter your password">
+                            </div>
+                            
+                            <div class="form-actions">
+                                <div class="remember-me">
+                                    <input type="checkbox" id="remember" class="remember-checkbox">
+                                    <label for="remember" class="remember-text">Remember me</label>
+                                </div>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">LOGIN</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Signup Form (hidden by default) -->
+                    <div class="signup-form" id="signupForm">
+                        <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
+                        
+                        <div class="social-login">
+                            <div class="social-btn">
+                                <img src="images/facebook.png" alt="facebook">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/instagram.webp" alt="instagram">
+                            </div>
+                            <div class="social-btn">
+                                <img src="images/x-twitter.jpg" alt="x twitter">
+                            </div>
+                        </div>
+                        
+                        <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your full name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-input" placeholder="Create a password">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="password" class="form-input" placeholder="Confirm your password">
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">SIGN UP</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="signup-container" id="sidebarContainer">
+                    <div class="signup-cta" id="loginSidebar">
+                        <h3 class="signup-title">NEW HERE?</h3>
+                        <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
+                        <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+                    </div>
+                    
+                    <div class="signup-cta" id="signupSidebar" style="display: none;">
+                        <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+                        <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
+                        <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section class="package-section">
+      <h1 class="package-title">Packages</h1>
+      <p class="package-subtitle">Our most popular products</p>
+      <div class="divider"></div>
+      <div class="package-container">
+        <img src="images/servicepromo.png" alt="package-1">
+        <div class="package-content">
+          <div class=" package-text-content">
+          <h1>Valentine Glow Package</h1>
+          <p class = "content-b"> Treat yourself or someone special this Valentine’s season with our all-in-one pampering bundle! <br> Perfect for date nights, self-love days, or a complete beauty glow-up!</p>
+          <h2>Package Includes: </h2>
+          <p> &#128151 <strong>Digital Perm –</strong> Add volume and bounce for a soft, romantic look.</p>
+          <p> &#128151 <strong>Lash Extension (of your choice) –</strong> Choose your preferred lash style for a flirty, eye-catching finish.</p>
+          <p> &#128151 <strong>Gel Manicure & Pedicure –</strong> Long-lasting shine and color to complete your Valentine-ready look.</p>  
+          <p class = "content-b"> Limited-time offer available this Valentine’s season only!</p>
+      </div>
+        <a href="contacts.html" class="package-button">BOOK NOW</a>
+      </div>
+      </div>
+    </section>
+
+  <section class="internal-nav-section">
+    <h2 class="internal-nav-title">Service Categories</h2>
+    <div class="internal-nav">
+      <a href="#manicure" class="manicure-a"><img src="images/manicure.png" alt="manicure icon"></a>
+      <a href="#hair" class="hair-a"><img src="images/hair.png" alt="hair icon"></a>
+      <a href="#pedicure" class="pedicure-a"><img src="images/pedicure.png" alt="pedicure icon"></a>
+      <a href="#makeup" class="makeup-a"><img src="images/makeup.png" alt="makeup icon"></a>
+      <a href="#eyelashes" class="eyelashes-a"><img src="images/eyelashes.png" alt="eyelashes icon"></a>
+    </div>
+  </section>
+     <!-- This is the internal navigation for the services page -->
+
+  <section class="services-section" id="manicure">
+    <h2 class="service-title">Manicure Services</h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/manicure-services1.webp" alt="Basic Manicure">
+        <div class="card-content">
+          <h3>Basic Manicure</h3>
+          <p>Nail trimming, cuticle cleaning, hand massage, and polish of your choice—perfect for a clean and simple refresh.</p>
+          <div>
+            <span class="price">₱950</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/manicure-services2.jpg" alt="Acrylic Nail Extension">
+        <div class="card-content">
+          <h3>Acrylic Nail Extension</h3>
+          <p>Durable and long-lasting artificial nails sculpted for added length and shape; great for dramatic nail styles.</p>
+          <div>
+            <span class="price">₱2,900</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/manicure-services3.jpg" alt="Polygel Nail Extension">
+        <div class="card-content">
+          <h3>Polygel Nail Extension</h3>
+          <p>A hybrid of acrylic and gel—lightweight, flexible, and strong with a natural look and feel.</p>
+          <div>
+            <span class="price">₱2,600</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/manicure-services4.jpg" alt="Press-on Nails">
+        <div class="card-content">
+          <h3>Press-on Nails</h3>
+          <p>Quick and stylish artificial nails you can wear temporarily—perfect for events or a fast beauty fix.</p>
+          <div>
+            <span class="price">₱2,400</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/manicure-services5.jpg" alt="Gel French Manicure">
+        <div class="card-content">
+          <h3>Gel French Manicure</h3>
+          <p>Classic French tips using long-lasting gel polish—sleek, elegant, and chip-resistant.</p>
+          <div>
+            <span class="price">₱1,200</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/manicure-services6.jpg" alt="Cat’s Eye Gel Manicure">
+        <div class="card-content">
+          <h3>Cat’s Eye Gel Manicure</h3>
+          <p>Glossy gel polish with a shimmering magnetic line that mimics a cat’s eye effect—bold and mesmerizing.</p>
+          <div>
+            <span class="price">₱1,500</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/manicure-services7.jpg" alt="Ombre Manicure">
+        <div class="card-content">
+          <h3>Ombre Manicure</h3>
+          <p>A smooth gradient of two or more colors blended across the nails—trendy and versatile.</p>
+          <div>
+            <span class="price">₱1,500</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/manicure-services8.jpg" alt="3D Nail Art">
+        <div class="card-content">
+          <h3>3D Nail Art</h3>
+          <p>Decorative nail designs featuring rhinestones, flowers, and charms for a bold and textured style.</p>
+          <div>
+            <span class="price">₱300 per nail</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services-section" id="hair">
+    <h2 class="service-title">Hair Services</h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/hair-services1.jpg" alt="Regular Perm">
+        <div class="card-content">
+          <h3>Regular Perm</h3>
+          <p>Adds long-lasting curls for volume and bounce.</p>
+          <div>
+            <span class="price">₱1,200-₱1,800</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/hair-services2.jpg" alt="Digital Perm">
+        <div class="card-content">
+          <h3>Digital Perm</h3>
+          <p>Soft, natural-looking curls using heat; perfect for modern styles.</p>
+          <div>
+            <span class="price">₱1,800-₱2,600</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/hair-services3.jpg" alt="C-Shape Curl">
+        <div class="card-content">
+          <h3>C-Shape Curl</h3>
+          <p>Smooth inward curls that frame the face beautifully.</p>
+          <div>
+            <span class="price">₱1,600-₱2,200</span>
+             <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/hair-services4.jpg" alt="Rebonding">
+        <div class="card-content">
+          <h3>Rebonding</h3>
+          <p>Straightens and smoothens hair for a shiny, frizz-free look.</p>
+          <div>
+            <span class="price">₱2,000-₱3,000</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/hair-services5.webp" alt="S-Shape Curl">
+        <div class="card-content">
+          <h3>S-Shape Curl</h3>
+          <p>Defined, flowing S-waves for a voluminous curl pattern.</p>
+          <div>
+            <span class="price">₱1,800-₱2,600</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/hair-services6.jpg" alt="Haircut">
+        <div class="card-content">
+          <h3>Haircut</h3>
+          <p>Clean, stylish trim customized for your face shape.</p>
+          <div>
+            <span class="price">₱250</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/hair-services7.jpg" alt="Brazilian Blowout">
+        <div class="card-content">
+          <h3>Brazilian Blowout</h3>
+          <p>Smooths, strengthens, and eliminates frizz for shiny, salon-sleek hair. Lasts up to 3 months.</p>
+          <div>
+            <span class="price">₱2,000-₱3,000</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/hair-services8.jpg" alt="Highlights">
+        <div class="card-content">
+          <h3>Highlights</h3>
+          <p>Brighten up your look with soft or bold streaks of color.</p>
+          <div>
+            <span class="price">₱1,200-₱1,800</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services-section" id="pedicure">
+    <h2 class="service-title">Pedicure Services</h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/pedicure-services1.jpg" alt="Basic Pedicure">
+        <div class="card-content">
+          <h3>Basic Pedicure</h3>
+          <p>Includes a relaxing foot soak, nail trim, cuticle care, foot scrub, light massage, and regular polish.</p>
+          <div>
+            <span class="price">₱1,000</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/pedicure-services2.jpg" alt="Gel Pedicure">
+        <div class="card-content">
+          <h3>Gel Pedicure</h3>
+          <p>Uses long-lasting gel polish cured under UV/LED light. Shine and chip-free for weeks.</p>
+          <div>
+            <span class="price">₱1,350</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/pedicure-services3.webp" alt="Gel French Pedicure">
+        <div class="card-content">
+          <h3>Gel French Pedicure</h3>
+          <p>Elegant French tip style with the durability of gel—perfect for a clean and classy look.</p>
+          <div>
+            <span class="price">₱1,300</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/pedicure-services4.jpg" alt="Cat’s Eye Gel Pedicure">
+        <div class="card-content">
+          <h3>Cat’s Eye Gel Pedicure</h3>
+          <p>Magnetic cat-eye polish that creates a 3D reflective effect—chic and stylish.</p>
+          <div>
+            <span class="price">₱1,600</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/pedicure-services5.jpg" alt="Ombre Pedicure">
+        <div class="card-content">
+          <h3>Ombre Pedicure</h3>
+          <p>Gradient effect using soft blending of two or more colors. Trendy and customizable.</p>
+          <div>
+            <span class="price">₱1,600</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/pedicure-services6.jpg" alt="Gel Nail Art Pedicure">
+        <div class="card-content">
+          <h3>Gel Nail Art Pedicure</h3>
+          <p>Creative and personalized nail art using gel polish. Includes decals, glitter, or 3D elements.</p>
+          <div>
+            <span class="price">₱100 per nail</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/pedicure-services7.webp" alt="Callus Removal Pedicure">
+        <div class="card-content">
+          <h3>Callus Removal Pedicure</h3>
+          <p>Targets and smooths rough areas with deep exfoliation and foot filing for baby-soft heels.</p>
+          <div>
+            <span class="price">₱260</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/pedicure-services8.jpg" alt="Spa Pedicure">
+        <div class="card-content">
+          <h3>Spa Pedicure</h3>
+          <p>A luxurious treatment including a scrub, foot mask, massage, and hot towel wrap for ultimate relaxation.</p>
+          <div>
+            <span class="price">₱580</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services-section" id="makeup">
+    <h2 class="service-title">Makeup Services</h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/makeup-service1.jpg" alt="Makeup Service 1">
+        <div class="card-content">
+          <h3>Sun-Kissed Perfection</h3>
+          <p>Feel like it’s golden hour at any time with bronzed makeup and cascading curls.</p>
+          <div>
+            <span class="price">₱2,000</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/makeup-service2.jpg" alt="Makeup Service 2">
+        <div class="card-content">
+          <h3>Soft Chic</h3>
+          <p>A subtle blush and a nude lip, striking the perfect balance between sophistication and a gentle, effortless charm.</p>
+          <div>
+            <span class="price">₱1,800</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/makeup-service3.jpg" alt="Makeup Service 3">
+        <div class="card-content">
+          <h3>Latte Glam</h3>
+          <p>Indulge in our latte inspired-makeup. A blend of warm, earthy tones to create a natural and sophisticated look that enhances your beauty</p>
+          <div>
+            <span class="price">₱2,000</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/makeup-service4.jpg" alt="Makeup Service 4">
+        <div class="card-content">
+          <h3>Red & Radiant</h3>
+          <p>Go bold and giam with red lips and smokey eye mokcup. Paired with a beautiful waves, you'll exude poise and grace.</p>
+          <div>
+            <span class="price">₱1,800</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/makeup-service5.jpg" alt="Makeup Service 5">
+        <div class="card-content">
+          <h3>Elegant & Rosy Finish</h3>
+          <p>Pair an elegantly sleek hairstyle with soft rosy makeup to bring out on alluring look.</p>
+          <div>
+            <span class="price">₱1,800</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/makeup-service6.jpg" alt="Makeup Service 6">
+        <div class="card-content">
+          <h3>Naturally Radiant</h3>
+          <p>Let your beauty shine through with a radiant, dewy makeup that captures your natural essence. Embrace that glow-from-within look with a natural hairstyle to give you an effortlessly put-together look.</p>
+          <div>
+            <span class="price">₱2,000</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/makeup-service7.jpg" alt="Makeup Service 7">
+        <div class="card-content">
+          <h3>Sophisticated Glamour</h3>
+          <p>Elevate your allure with a natural but elegant makeup that stands out at any occasion. Complete the look with a sophisticated hairstyle that compliments your features.</p>
+          <div>
+            <span class="price">₱2,000</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/makeup-service8.jpg" alt="Glossy Glow-up">
+        <div class="card-content">
+          <h3>Glossy Glow-up</h3>
+          <p>Enhance your look with a glossy shine that shows off your best features Complete your look with luxurious curts for an overall luminous glow.</p>
+          <div>
+            <span class="price">₱2,500</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services-section" id="eyelashes">
+    <h2 class="service-title">Eyelash Services</h2>
+    <div class="divider"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/eyelash-service1.jpg" alt="Eyelash Service 1">
+        <div class="card-content">
+          <h3>Natural</h3>
+          <p>Soft and subtle lashes that enhance your natural beauty — perfect for everyday wear.</p>
+          <div>
+            <span class="price">New Set: 700<br>Retouch: 450
+              </span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/eyelash-service2.jpg" alt="Eyelash Service 2">
+        <div class="card-content">
+          <h3>Anime</h3>
+          <p>Bold, fluttery, and wide-eyed — inspired by anime characters for a dramatic, doll-like look.</p>
+          <div>
+            <span class="price">New Set: 1500<br>Retouch: 1000
+              </span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/eyelash-service3.jpg" alt="Eyelash Service 3">
+        <div class="card-content">
+          <h3>Siren Flare</h3>
+          <p>A sultry, lifted style with flared ends — adds fierce charm and depth to your eyes.</p>
+          <div>
+            <span class="price">New Set: 1250<br>Retouch: 800
+              </span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/eyelash-service4.jpg" alt="Eyelash Service 4">
+        <div class="card-content">
+          <h3>Wet Look</h3>
+          <p>Glossy and sleek with a spiky texture — gives your lashes a fresh, dewy, runway-ready vibe.</p>
+          <div>
+            <span class="price">New Set: 1100<br>Retouch: 700
+              </span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/eyelash-service5.jpg" alt="Eyelash Service 5">
+        <div class="card-content">
+          <h3>Mermaid Wispy</h3>
+          <p>Whimsical and wispy with soft volume — perfect for that dreamy, under-the-sea glam.</p>
+          <div>
+            <span class="price">New Set: 1500<br>Retouch: 1000
+              </span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/eyelash-service6.jpg" alt="Eyelash Service 6">
+        <div class="card-content">
+          <h3>Fox Eye</h3>
+          <p>Elongated and lifted lashes that create a sexy, almond-shaped eye effect.</p>
+          <div>
+            <span class="price">New Set: 1350<br>Retouch: 900</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/eyelash-service7.jpg" alt="Eyelash Service 7">
+        <div class="card-content">
+          <h3>Doll Eye Lashes</h3>
+          <p>Evenly distributed volume for a wide-eyed, innocent doll-like finish.</p>
+          <div>
+            <span class="price">New Set: ₱1,400<br>Retouch: ₱950
+              </span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="images/eyelash-service8.jpg" alt="Eyelash Service 8">
+        <div class="card-content">
+          <h3>Volume Mega Lash Extensions</h3>
+          <p>Full, dense, and ultra-voluminous — for those who want maximum glam and impact.</p>
+          <div>
+            <span class="price">New Set: ₱1,800<br>Retouch: ₱1,200</span>
+            <a href="contacts.html" class="book-btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+        <h3>Information</h3>
+        <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html">Terms and Services</a></li>
+            <li><a href="faq.html">Privacy and Policy</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+            <li><a href="product.html#nails">Nails</a></li>
+            <li><a href="product.html#hair">Hair</a></li>
+            <li><a href="product.html#skincare">Skincare</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="services.html#manicure">Manicure</a></li>
+            <li><a href="services.html#hair">Hair</a></li>
+            <li><a href="services.html#pedicure">Pedicure</a></li>
+            <li><a href="services.html#makeup">Makeup</a></li>
+            <li><a href="services.html#eyelashes">Eyelash</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+        <form class="subscription-form">
+            <input type="email" placeholder="Your Email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div class="footer-section">
+    </div>
+    <div class="footer-section">
+        <h3>Visit Us</h3>
+        <p>123 Elegance Avenue</p>
+        <p>Luxury District, City</p>
+        <p>ZIP Code</p>
+    </div>
+    <div class="footer-section">
+        <h3>Working Hours</h3>
+        <p>Monday - Friday: 8:00AM - 7:00PM</p>
+        <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
+    </div>
+  </footer>
+</body>
+<script src="script/script.js"></script>
+</html>
