@@ -1,0 +1,237 @@
+.services-section img, .package-container img {
+  background-color: white;
+}
+
+/* Internal Nav */
+
+.internal-nav-section {
+  background-color: var(--accent);
+  color: white;
+  padding: 5rem 6%;
+  text-align: center;
+}
+
+.internal-nav-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.internal-nav {
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  background-color: var(--accent);
+}
+
+.internal-nav a {
+  width: 8%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--accent-dark);
+}
+
+.nail-a:after {
+  content: "Nail";
+}
+
+.hair-a:after {
+  content: "Hair";
+}
+
+.skincare-a:after {
+  content: "Skincare";
+}
+
+.internal-nav a::after {
+  position: absolute;
+  margin-top: 8%;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: var(--secondary);
+}
+
+.internal-nav img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.internal-nav img:hover {
+  transform: scale(1.1);
+}
+
+/*Products Section*/
+
+.products-section {
+  color: var(--text-dark);
+  padding: 3rem 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.products-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.products-card {
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.products-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.products-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.8rem;
+}
+
+.card-content h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  font-weight: 700; 
+}
+
+.card-content p {
+  margin: 0;
+  color: var(--text-medium);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.card-content div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-top: 1.2rem;
+  font-weight: 700;
+}
+
+.shop-btn {
+  text-wrap: nowrap;
+  text-decoration: none;
+  text-align: center;
+  width: 40%;
+  height: 10%;
+  background-color: var(--accent);
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+
+.shop-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+#skincare {
+  margin-bottom: 6rem;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 1400px) {
+  .internal-nav a {
+    height: 70px;
+    width: 70px;
+  }
+
+  .internal-nav-section {
+    padding: 4rem 6%;
+  }
+
+}
+@media screen and (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .internal-nav-section {
+    padding: 3rem 6%;
+  }
+
+  .internal-nav a {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 995px) {
+
+  .internal-nav a:after {
+    margin-top: 10%;
+  }
+
+  .internal-nav-section {
+    padding: 2rem 6%;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .internal-nav a {
+    height: 50px;
+    width: 50px;
+  }
+
+  .internal-nav a:after {
+    margin-top: 12%;
+  }
+
+  .internal-nav-section {
+    padding: 1rem 6%;
+  }
+
+}

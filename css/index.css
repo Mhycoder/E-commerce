@@ -1,0 +1,382 @@
+.hero {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 0;
+  display: flex;
+  min-height: 80vh;
+}
+
+.hero-content {
+  flex: 1;
+  padding: 6rem 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content h1 span {
+  color: var(--accent);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-family: 'Lato', sans-serif;
+  max-width: 550px;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--text-light);
+  padding: 14px 32px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 1.5rem;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text-light);
+}
+
+.btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.section {
+  padding: 6rem 6%;
+}
+
+.best-sellers {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  font-family: 'Lato', sans-serif;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.products-grid, .services-grid, .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-card, .service-card, .gallery-card, .testimonial-card {
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.product-card {
+  height: 690px;
+}
+
+.product-card:hover, .service-card:hover, .gallery-card:hover, .testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img, .service-card img, .testimonial-card img, .gallery-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.testimonial-card img {
+  height: 300px;
+}
+
+.gallery-card img {
+  height: 600px;
+}
+
+.card-content {
+  padding: 1.8rem;
+}
+
+.card-content h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.card-content p {
+  margin: 0 0 1rem;
+  color: var(--text-medium);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.card-content div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: auto;
+}
+
+.card-content div span {
+  margin: auto 0;
+}
+
+.product-card-content, .service-card-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  justify-content: space-between; 
+}
+
+.product-card-content div, .service-card-content div {
+  margin-top: auto;
+}
+
+.product-card-content div a, .service-card-content div a {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.shop-btn {
+  text-decoration: none;
+  text-align: center;
+  width: 40%;
+  height: 10%;
+  background-color: var(--accent);
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+
+.shop-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 4rem 6%;
+  background-color: var(--secondary);
+}
+
+.feature-item {
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.feature-text {
+  color: var(--text-medium);
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7;
+}
+
+.cta-section, .testimonials-section {
+  background-color: var(--accent);
+  color: white;
+  padding: 5rem 6%;
+  text-align: center;
+}
+
+.testimonials-section {
+  background-color: var(--primary);
+}
+
+.cta-title, .testimonial-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7;
+}
+
+.cta-btn {
+  text-decoration: none;
+  background-color: white;
+  color: var(--accent);
+  border: none;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Lato', sans-serif;
+}
+
+.cta-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 1200px) {
+  .products-grid, .services-grid, .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  
+  .feature-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .hero {
+    flex-direction:column-reverse;
+  }
+
+  .hero-content {
+    padding: 4rem 6%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+}
+
+/* Header and navigation responsive styling */
+@media screen and (max-width: 768px) {
+
+  .products-grid, .services-grid, .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .section {
+    padding: 4rem 6%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cta-title, .testimonial-title {
+    font-size: 2rem;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 576px) {
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    display: block;
+    width: 88%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+}
