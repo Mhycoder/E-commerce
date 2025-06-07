@@ -33,8 +33,17 @@
             <a href="faq.html">FAQ</a>
         </div>
         <div class="nav-icons" id="nav-column1">
-            <a href="#"><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-            <a href="cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+          <a href="#"
+            ><div class="user-icon" id="userIcon">
+              <img src="images/user.png" alt="user" /></div
+          ></a>
+          <a href="cart.html"
+            ><div class="cart-icon">
+              <img src="images/cart.png" alt="cart" /><span class="cart-count"
+                >0</span
+              >
+            </div></a
+          >
         </div>
     </nav>  
     <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
@@ -91,10 +100,10 @@
                     
                     <div class="action-buttons">
                         <button class="btn-modal btn-modal-outline">Log Out</button>
-                        <a href="#" class="btn-modal btn-modal-primary">Payment Methods</a>
+                        <a href="payment.html" class="btn-modal btn-modal-primary">Payment Methods</a>
                     </div>
                     
-                    <button class="edit-profile">Edit Profile →</button>
+                    <button class="edit-profile" onclick="modalEdit()">Edit Profile →</button>
                 </div>
             </div>
         <!-- Login Modal -->
@@ -221,7 +230,10 @@
           <p> &#128151 <strong>Gel Manicure & Pedicure –</strong> Long-lasting shine and color to complete your Valentine-ready look.</p>  
           <p class = "content-b"> Limited-time offer available this Valentine’s season only!</p>
       </div>
+      <div class="package-action">
+        <span class="price">₱1,800</span>
         <a href="contacts.html" class="package-button">BOOK NOW</a>
+      </div>
       </div>
       </div>
     </section>
@@ -747,7 +759,7 @@
         <h3>Stay Connected</h3>
         <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
         <form class="subscription-form">
-            <input type="email" placeholder="Your Email">
+            <input type="email" placeholder="Your Email" id="email" >
             <button type="submit">Subscribe</button>
         </form>
     </div>
@@ -766,5 +778,5 @@
     </div>
   </footer>
 </body>
-<script src="script/script.js"></script>
+<script src="script/modal.js"></script>
 </html>

@@ -34,8 +34,17 @@
           <a href="faq.html">FAQ</a>
       </div>
       <div class="nav-icons" id="nav-column1">
-          <a href="#"><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-          <a href="cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+        <a href="#"
+          ><div class="user-icon" id="userIcon">
+            <img src="images/user.png" alt="user" /></div
+        ></a>
+        <a href="cart.html"
+          ><div class="cart-icon">
+            <img src="images/cart.png" alt="cart" /><span class="cart-count"
+              >0</span
+            >
+          </div></a
+        >
       </div>
   </nav>  
   <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
@@ -91,10 +100,10 @@
                     
                     <div class="action-buttons">
                         <button class="btn-modal btn-modal-outline">Log Out</button>
-                        <a href="#" class="btn-modal btn-modal-primary">Payment Methods</a>
+                        <a href="payment.html" class="btn-modal btn-modal-primary">Payment Methods</a>
                     </div>
                     
-                    <button class="edit-profile">Edit Profile →</button>
+                    <button class="edit-profile" onclick="modalEdit()">Edit Profile →</button>
                 </div>
             </div>
         <!-- Login Modal -->
@@ -210,7 +219,7 @@
         <div class="cart-container">
             <div class="cart-header">
                 <label>
-                  <input type="checkbox">
+                  <input type="checkbox" onchange="toggleSelectAll(this)">
                   <span class="select-all-box"></span>
                 </label>
                 <div>PRODUCT</div>
@@ -223,11 +232,35 @@
 
             </div>    
             <div class="cart-footer">
-                <div class="cart-total">Total: <span id="total"></span></div>
-                <button class="checkout-btn" onclick="checkOut()">CHECKOUT</button>
+                <div class="cart-total">Total: <span id="total">₱0</span></div>
+                <button class="checkout-btn" id="proceedCheckout">Proceed to Checkout</button>
             </div>
         </div>
     </div>
+
+    <div class="order-summary">
+        <div class="order-exit">
+            <p id="order-exit">x</p>
+        </div>
+        <div class="order-header">
+            <div>ORDER SUMMARY</div>
+        </div>
+        <div class="order-container">
+            <div class="order-subtotal">Subtotal: <span id="subtotal">₱0</span></div>
+            <div class="shipping-fee">Shipping Fee: <span id="shipping">₱0</span></div>
+            <div class="discount">Discount: <span id="discount">₱0 (15% OFF)</span></div>
+        </div>
+        <div class="order-footer">
+            <div class="cart-total">Total: <span id="total2">₱0</span></div>
+            <form>
+                <select id="card-option">
+                    <option id="default-option">Debit Card</option>
+                </select>
+                <button class="checkout-btn" onclick="checkOut()">CHECKOUT</button>
+            </form>
+        </div>
+    </div>
+
   </main>
 
  <footer>
@@ -261,7 +294,7 @@
         <h3>Stay Connected</h3>
         <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
         <form class="subscription-form">
-            <input type="email" placeholder="Your Email">
+            <input type="email" placeholder="Your Email" id="email" >
             <button type="submit">Subscribe</button>
         </form>
     </div>
@@ -281,6 +314,7 @@
   </footer>
 
 </body>
-<script src="script/script.js">
+<script src="script/modal.js"></script>
+<script src="script/cart.js"></script>
 </script>
 </html>

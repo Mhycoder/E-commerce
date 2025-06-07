@@ -1,221 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" type="text/css" href="css/nav-footer.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<header>
-  <div class="header-container">
-    <div class="logo">
-        <img src="images/shop-logo.png" alt="Arman Salon Logo">
-        <span class="logo-text">ARMAN SALON</span>
-    </div>
-  </div>
-  <nav>
-      <div class="nav-links" id="nav-column">
+    <link rel="stylesheet" type="text/css" href="css/nav-footer.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="images/shop-logo.png" alt="Arman Salon Logo" />
+          <span class="logo-text">ARMAN SALON</span>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links" id="nav-column">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <div class="dropdown">
-              <a href="product.html">Products</a>
-              <div class="dropdown-content">
-                  <a href="prod-list/prod-list1.html">Store</a>
-              </div>
+            <a href="product.html">Products</a>
+            <div class="dropdown-content">
+              <a href="prod-list/prod-list1.html">Store</a>
+            </div>
           </div>
           <a href="services.html">Services</a>
           <a href="contacts.html">Contacts</a>
           <a href="faq.html">FAQ</a>
-      </div>
-      <div class="nav-icons" id="nav-column1">
-          <a href="#"><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-          <a href="cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
-      </div>
-  </nav>  
-  <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
-  <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>           
-</header>
-
-  <main>
-                <div class="user-profile-modal">
-                <div class="modal-header">
-                    <div class="logo">
-                        <img src="images/shop-logo.png" alt="Arman Salon Logo" />
-                    </div>
-                    <button class="close-button">×</button>
-                </div>
-                <div class="user-content">
-                    <div class="user-avatar">
-                        <div class="avatar-image">
-                            <img src="images/user.png">
-                        </div>
-                        <div class="username">Username</div>
-                    </div>
-                    
-                    <div class="user-details">
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                            </div>
-                            <div class="detail-content">
-                                <div class="detail-label">Mobile Number</div>
-                                <div class="detail-value">090909</div>
-                            </div>
-                        </div>
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                            </div>
-                            <div class="detail-content">
-                                <div class="detail-label">Email Address</div>
-                                <div class="detail-value">email@mail.com</div>
-                            </div>
-                        </div>
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                            </div>
-                            <div class="detail-content">
-                                <div class="detail-label">Address</div>
-                                <div class="detail-value">7111 St.</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="divider-modal"></div>
-                    
-                    <div class="action-buttons">
-                        <button class="btn-modal btn-modal-outline">Log Out</button>
-                        <a href="#" class="btn-modal btn-modal-primary">Payment Methods</a>
-                    </div>
-                    
-                    <button class="edit-profile">Edit Profile →</button>
-                </div>
-            </div>
-        <!-- Login Modal -->
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal-container">
-                <button class="close-btn">×</button>
-                
-                <div class="login-container">
-                    <div class="modal-header">
-                        <div class="modal-logo">
-                            <img src="images/shop-logo.png" class="logo">
-                            <h2 class="form-title" id="modal-title">LOGIN</h2>
-                        </div>
-                    </div>
-                    
-                    <!-- Login Form -->
-                    <div class="login-form" id="loginForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR CONTINUE WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Email/Username</label>
-                                <input type="text" class="form-input" placeholder="Enter your email or username">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Enter your password">
-                            </div>
-                            
-                            <div class="form-actions">
-                                <div class="remember-me">
-                                    <input type="checkbox" id="remember" class="remember-checkbox">
-                                    <label for="remember" class="remember-text">Remember me</label>
-                                </div>
-                                <a href="#" class="forgot-password">Forgot Password?</a>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">LOGIN</button>
-                        </form>
-                    </div>
-                    
-                    <!-- Signup Form (hidden by default) -->
-                    <div class="signup-form" id="signupForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR SIGN UP WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Full Name</label>
-                                <input type="text" class="form-input" placeholder="Enter your full name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Create a password">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Confirm Password</label>
-                                <input type="password" class="form-input" placeholder="Confirm your password">
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">SIGN UP</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="signup-container" id="sidebarContainer">
-                    <div class="signup-cta" id="loginSidebar">
-                        <h3 class="signup-title">NEW HERE?</h3>
-                        <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
-                        <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
-                    </div>
-                    
-                    <div class="signup-cta" id="signupSidebar" style="display: none;">
-                        <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
-                        <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
-                        <button class="submit-btn" id="showLoginBtn">LOGIN</button>
-                    </div>
-                </div>
-            </div>
         </div>
-    <section class="owner">
-      <div class="owner-image">
-        <img src="images/arman-picture.webp" alt="Arman Salon">
+        <div class="nav-icons" id="nav-column1">
+          <a href="#"
+            ><div class="user-icon" id="userIcon">
+              <img src="images/user.png" alt="user" /></div
+          ></a>
+          <a href="cart.html"
+            ><div class="cart-icon">
+              <img src="images/cart.png" alt="cart" /><span class="cart-count"
+                >0</span
+              >
+            </div></a
+          >
+        </div>
+      </nav>
+      <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">
+        ☰
+      </button>
+      <button
+        class="mobile-menu-toggle"
+        id="menu-toggle1"
+        onclick="closeMenu()"
+      >
+        ☰
+      </button>
+    </header>
+
+    <main>
+      <div class="user-profile-modal">
+        <div class="modal-header">
+          <div class="logo">
+            <img src="images/shop-logo.png" alt="Arman Salon Logo" />
+          </div>
+          <button class="close-button">×</button>
+        </div>
+        <div class="user-content">
+          <div class="user-avatar">
+            <div class="avatar-image">
+              <img src="images/user.png" />
+            </div>
+            <div class="username">Username</div>
+          </div>
+
+          <div class="user-details">
+            <div class="detail-item">
+              <div class="detail-icon"></div>
+              <div class="detail-content">
+                <div class="detail-label">Mobile Number</div>
+                <div class="detail-value">090909</div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon"></div>
+              <div class="detail-content">
+                <div class="detail-label">Email Address</div>
+                <div class="detail-value">email@mail.com</div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon"></div>
+              <div class="detail-content">
+                <div class="detail-label">Address</div>
+                <div class="detail-value">7111 St.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider-modal"></div>
+
+          <div class="action-buttons">
+            <button class="btn-modal btn-modal-outline">Log Out</button>
+            <a href="payment.html" class="btn-modal btn-modal-primary"
+              >Payment Methods</a
+            >
+          </div>
+
+          <button class="edit-profile" onclick="modalEdit()">
+            Edit Profile →
+          </button>
+        </div>
       </div>
-      <div class="owner-content">
+      <!-- Login Modal -->
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+          <button class="close-btn">×</button>
+
+          <div class="login-container">
+            <div class="modal-header">
+              <div class="modal-logo">
+                <img src="images/shop-logo.png" class="logo" />
+                <h2 class="form-title" id="modal-title">LOGIN</h2>
+              </div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="login-form" id="loginForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by signing in to your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Email/Username</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your email or username"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Enter your password"
+                  />
+                </div>
+
+                <div class="form-actions">
+                  <div class="remember-me">
+                    <input
+                      type="checkbox"
+                      id="remember"
+                      class="remember-checkbox"
+                    />
+                    <label for="remember" class="remember-text"
+                      >Remember me</label
+                    >
+                  </div>
+                  <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">LOGIN</button>
+              </form>
+            </div>
+
+            <!-- Signup Form (hidden by default) -->
+            <div class="signup-form" id="signupForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by creating your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Create a password"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Confirm your password"
+                  />
+                </div>
+
+                <button type="submit" class="submit-btn">SIGN UP</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="signup-container" id="sidebarContainer">
+            <div class="signup-cta" id="loginSidebar">
+              <h3 class="signup-title">NEW HERE?</h3>
+              <p class="signup-text">
+                Sign up and discover a great amount of new opportunities and
+                exclusive offers!
+              </p>
+              <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+            </div>
+
+            <div class="signup-cta" id="signupSidebar" style="display: none">
+              <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+              <p class="login-text">
+                Login to access your profile and enjoy exclusive benefits!
+              </p>
+              <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="owner">
+        <div class="owner-image">
+          <img src="images/arman-picture.webp" alt="Arman Salon" />
+        </div>
+        <div class="owner-content">
           <h1>History of <span>Arman Salon</span></h1>
-          <p>It was in 1978 when Arman came to the Philippines. He was the manager of Rever Salon at the Mandarin Oriental Hotel, and after becoming a partner and later on its sole owner, Arman expanded the Rever Salon to five locations. In 1989, after seeing a need for a salon that would offer high quality hairdressing at a customer-friendly price, Arman established Arman Salon Inc. With the desire to share his expertise to more Filipinos, he opened the very first Arman Salon in New Farmer's Market in Cubao, Quezon City.</p>
-      </div>
-    </section>
-    <section class="opening">
-      <div class="opening-content">
-        <h1>Opening Hours</h1>
-        <ul>
+          <p>
+            It was in 1978 when Arman came to the Philippines. He was the
+            manager of Rever Salon at the Mandarin Oriental Hotel, and after
+            becoming a partner and later on its sole owner, Arman expanded the
+            Rever Salon to five locations. In 1989, after seeing a need for a
+            salon that would offer high quality hairdressing at a
+            customer-friendly price, Arman established Arman Salon Inc. With the
+            desire to share his expertise to more Filipinos, he opened the very
+            first Arman Salon in New Farmer's Market in Cubao, Quezon City.
+          </p>
+        </div>
+      </section>
+      <section class="opening">
+        <div class="opening-content">
+          <h1>Opening Hours</h1>
+          <ul>
             <li><strong>Sunday</strong> 8:00am - 7:00pm</li>
             <li><strong>Monday</strong> 10:00am - 5:00pm</li>
             <li><strong>Tuesday</strong> 10:00am - 5:00pm</li>
@@ -223,63 +287,65 @@
             <li><strong>Thursday</strong> 10:00am - 5:00pm</li>
             <li><strong>Friday</strong> 10:00am - 5:00pm</li>
             <li><strong>Saturday</strong> 8:00am - 7:00pm</li>
-        </ul>
-      </div>
-      <div class="opening-image">
-        <img src="images/shop.jpg" alt="Interior View of Salon">
-      </div>
-    </section>
-  </main>
-        
- <footer>
-    <div class="footer-section">
+          </ul>
+        </div>
+        <div class="opening-image">
+          <img src="images/shop.jpg" alt="Interior View of Salon" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-section">
         <h3>Information</h3>
         <ul>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="faq.html">Terms and Services</a></li>
-            <li><a href="faq.html">Privacy and Policy</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="faq.html">Terms and Services</a></li>
+          <li><a href="faq.html">Privacy and Policy</a></li>
         </ul>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Products</h3>
         <ul>
-            <li><a href="product.html#nails">Nails</a></li>
-            <li><a href="product.html#hair">Hair</a></li>
-            <li><a href="product.html#skincare">Skincare</a></li>
+          <li><a href="product.html#nails">Nails</a></li>
+          <li><a href="product.html#hair">Hair</a></li>
+          <li><a href="product.html#skincare">Skincare</a></li>
         </ul>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Services</h3>
         <ul>
-            <li><a href="services.html#manicure">Manicure</a></li>
-            <li><a href="services.html#hair">Hair</a></li>
-            <li><a href="services.html#pedicure">Pedicure</a></li>
-            <li><a href="services.html#makeup">Makeup</a></li>
-            <li><a href="services.html#eyelashes">Eyelash</a></li>
+          <li><a href="services.html#manicure">Manicure</a></li>
+          <li><a href="services.html#hair">Hair</a></li>
+          <li><a href="services.html#pedicure">Pedicure</a></li>
+          <li><a href="services.html#makeup">Makeup</a></li>
+          <li><a href="services.html#eyelashes">Eyelash</a></li>
         </ul>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Stay Connected</h3>
-        <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+        <p>
+          Subscribe to get exclusive offers, beauty tips, and the latest updates
+          straight to your inbox.
+        </p>
         <form class="subscription-form">
-            <input type="email" placeholder="Your Email">
-            <button type="submit">Subscribe</button>
+          <input type="email" placeholder="Your Email" id="email" />
+          <button type="submit">Subscribe</button>
         </form>
-    </div>
-    <div class="footer-section">
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section"></div>
+      <div class="footer-section">
         <h3>Visit Us</h3>
         <p>123 Elegance Avenue</p>
         <p>Luxury District, City</p>
         <p>ZIP Code</p>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Working Hours</h3>
         <p>Monday - Friday: 8:00AM - 7:00PM</p>
         <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
-    </div>
-  </footer>
-</body>
-<script src="script/script.js"></script>
+      </div>
+    </footer>
+  </body>
+  <script src="script/modal.js"></script>
 </html>

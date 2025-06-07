@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/nav-footer.css" />
-    <link rel="stylesheet" href="css/faq.css" />
+    <title>Payment</title>
+    <link rel="stylesheet" type="text/css" href="css/nav-footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <title>FAQ</title>
+    <link rel="stylesheet" type="text/css" href="css/payment.css" />
   </head>
-
   <body>
     <header>
       <div class="header-container">
@@ -182,7 +181,7 @@
                   <a href="#" class="forgot-password">Forgot Password?</a>
                 </div>
 
-                <button type="submit" class="submit-btn">LOGIN</button>
+                <button class="submit-btn">LOGIN</button>
               </form>
             </div>
 
@@ -259,132 +258,103 @@
           </div>
         </div>
       </div>
-      <div class="page-title">
-        <h1>Frequently Asked Questions</h1>
-        <div class="search-container">
-          <input type="text" placeholder="Search for answers..." />
+      <div class="payment-modal">
+        <div class="payment-modal-container">
+          <div class="payment-modal-header">
+            <h2>Add Payment Method</h2>
+            <p onclick="closeAddCard()">x</p>
+          </div>
+          <form>
+            <label for="card-number">Card Number:</label>
+            <input
+              type="text"
+              name="card-number"
+              placeholder="123456789"
+              id="card-number"
+            />
+            <label for="card-name">Cardholder Name:</label>
+            <input
+              type="text"
+              name="card-name"
+              placeholder="Enter your Name"
+              id="card-name"
+            />
+            <div>
+              <div class="expiry-date">
+                <label for="card-date">Expiry Date:</label>
+                <input
+                  type="text"
+                  name="card-date"
+                  placeholder="MM/YY"
+                  id="card-date"
+                />
+              </div>
+              <div class="cvv">
+                <label for="card-cvv">CVV:</label>
+                <input
+                  type="text"
+                  name="card-cvv"
+                  placeholder="123"
+                  id="card-cvv"
+                />
+              </div>
+            </div>
+            <label for="card-type">Card Type:</label>
+            <select name="card-type" id="card-type">
+              <option>Visa</option>
+              <option>Mastercard</option>
+            </select>
+            <label for="card-category">Card Category:</label>
+            <select name="card-category" id="card-category">
+              <option>Credit Card</option>
+              <option>Debit Card</option>
+              <option>Paypal</option>
+              <option>Mastercard</option>
+            </select>
+            <div class="payment-modal-actions">
+              <button class="btn cancel-btn">Cancel</button>
+              <button class="btn add-btn">Add Card</button>
+            </div>
+          </form>
         </div>
       </div>
-
-      <div class="faq-grid">
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq1.jpg" alt="Calendar Icon" />
+      <div class="payment-methods">
+        <h1>Payment Methods</h1>
+        <div class="divider"></div>
+        <div class="lower-content">
+          <div class="payment">
+            <div class="payment-header">
+              <h3>Your Payment Methods</h3>
+            </div>
+            <div class="card-container">
+              <div class="add-card" onclick="openAddCard()">
+                <div>+</div>
+                <h4>Add Payment Card</h4>
+              </div>
+            </div>
           </div>
-          <h3>Salon Hours</h3>
-          <p>
-            Monday-Friday: 9:00AM-9:00PM<br />
-            Saturday and Sunday: 9:00AM-7:00PM<br /><br />
-            The Arman Salon team is not available on Thanksgiving Day,
-            Christmas, and New Year's Day.
-          </p>
+          <div class="transaction-history transaction-history-nomodal">
+            <h3>Payment History</h3>
+            <div class="transaction-container">
+              <div
+                class="transaction-content transaction-content-nomodal"
+              ></div>
+              <button onclick="openTransaction()">View Transactions</button>
+            </div>
+          </div>
         </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq2.jpg" alt="Shipping Icon" />
-          </div>
-          <h3>Order Processing</h3>
-          <p>
-            Once your order is placed, it generally takes 1-2 business days to
-            process and pick. For expedited or overnight shipping, orders placed
-            before 12:00 PM PT, Monday through Friday, will typically ship the
-            same day.
-          </p>
+      </div>
+      <div class="transaction-history transaction-modal">
+        <div class="transaction-header">
+          <h3>Payment History</h3>
+          <p onclick="closeTransaction()">x</p>
         </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq3.jpg" alt="Package Icon" />
-          </div>
-          <h3>Shipping Notifications</h3>
-          <p>
-            We will email you a shipment notification along with a tracking
-            number as soon as your package ships.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq4.jpg" alt="Phone Icon" />
-          </div>
-          <h3>Contact Us</h3>
-          <p>
-            Please contact us right away at 1-888-987-7273 or<br />
-            arman_salon@gmail.com
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq5.jpg" alt="Return Box Icon" />
-          </div>
-          <h3>Returns Policy</h3>
-          <p>
-            U.S. returns are free within 30 days. Note you are allowed 1
-            exchange on your original order. International orders are final—no
-            returns or exchanges. Shipping and duties are non-refundable.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq6.jpg" alt="Calendar X Icon" />
-          </div>
-          <h3>Appointment Cancellations</h3>
-          <p>
-            We kindly ask that you give at least 24 hours' notice for
-            cancellations or rescheduling to avoid a cancellation fee.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq7.jpg" alt="Calendar Check Icon" />
-          </div>
-          <h3>Booking Appointments</h3>
-          <p>
-            We recommend booking an appointment to ensure availability, but we
-            also accept walk-ins based on stylist availability.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq8.jpg" alt="Credit Card Icon" />
-          </div>
-          <h3>No Additional Fees</h3>
-          <p>
-            No, there will be no additional charges if you select this mode of
-            payment or even PayPal payment option.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq9.jpg" alt="Payment Icon" />
-          </div>
-          <h3>Payment Methods</h3>
-          <p>
-            Arman Salon accepts online payment such as PayPal, Visa, MasterCard,
-            and Credit Card. For those who do not want to pay online, Money and
-            Bank transfer are also available.
-          </p>
-        </div>
-
-        <div class="faq-card">
-          <div class="icon-container">
-            <img src="images/faq10.jpg" alt="Product Icon" />
-          </div>
-          <h3>Our Products</h3>
-          <p>
-            We use high-quality, professional-grade products, including L'Oréal
-            Professionnel, chosen to ensure the best results for your hair and
-            skin.
-          </p>
+        <div class="transaction-container">
+          <div class="transaction-content transaction-content-modal"></div>
         </div>
       </div>
     </main>
+
     <footer>
       <div class="footer-section">
         <h3>Information</h3>
@@ -438,4 +408,5 @@
     </footer>
   </body>
   <script src="script/modal.js"></script>
+  <script src="script/payment.js"></script>
 </html>

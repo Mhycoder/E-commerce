@@ -1,434 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Tenor+Sans&family=Inter&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/nav-footer.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Tenor+Sans&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/nav-footer.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Contact Page</title>
-</head>
+  </head>
 
-<body>
-<header>
-  <div class="header-container">
-    <div class="logo">
-        <img src="images/shop-logo.png" alt="Arman Salon Logo">
-        <span class="logo-text">ARMAN SALON</span>
-    </div>
-  </div>
-  <nav>
-      <div class="nav-links" id="nav-column">
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="images/shop-logo.png" alt="Arman Salon Logo" />
+          <span class="logo-text">ARMAN SALON</span>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links" id="nav-column">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <div class="dropdown">
-              <a href="product.html">Products</a>
-              <div class="dropdown-content">
-                  <a href="prod-list/prod-list1.html">Store</a>
-              </div>
+            <a href="product.html">Products</a>
+            <div class="dropdown-content">
+              <a href="prod-list/prod-list1.html">Store</a>
+            </div>
           </div>
           <a href="services.html">Services</a>
           <a href="contacts.html">Contacts</a>
           <a href="faq.html">FAQ</a>
-      </div>
-      <div class="nav-icons" id="nav-column1">
-          <a href="#"><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-          <a href="cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
-      </div>
-  </nav>  
-  <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
-  <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>           
-</header>
-
-  <main>
-                <div class="user-profile-modal">
-                <div class="modal-header">
-                    <div class="logo">
-                        <img src="images/shop-logo.png" alt="Arman Salon Logo" />
-                    </div>
-                    <button class="close-button">×</button>
-                </div>
-                <div class="user-content">
-                    <div class="user-avatar">
-                        <div class="avatar-image">
-                            <img src="images/user.png">
-                        </div>
-                        <div class="username">Username</div>
-                    </div>
-                    
-                    <div class="user-details">
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                            </div>
-                            <div class="detail-content">
-                                <div class="detail-label">Mobile Number</div>
-                                <div class="detail-value">090909</div>
-                            </div>
-                        </div>
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                            </div>
-                            <div class="detail-content">
-                                <div class="detail-label">Email Address</div>
-                                <div class="detail-value">email@mail.com</div>
-                            </div>
-                        </div>
-                        
-                        <div class="detail-item">
-                            <div class="detail-icon">
-                            </div>
-                            <div class="detail-content">
-                                <div class="detail-label">Address</div>
-                                <div class="detail-value">7111 St.</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="divider-modal"></div>
-                    
-                    <div class="action-buttons">
-                        <button class="btn-modal btn-modal-outline">Log Out</button>
-                        <a href="#" class="btn-modal btn-modal-primary">Payment Methods</a>
-                    </div>
-                    
-                    <button class="edit-profile">Edit Profile →</button>
-                </div>
-            </div>
-        <!-- Login Modal -->
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal-container">
-                <button class="close-btn">×</button>
-                
-                <div class="login-container">
-                    <div class="modal-header">
-                        <div class="modal-logo">
-                            <img src="images/shop-logo.png" class="logo">
-                            <h2 class="form-title" id="modal-title">LOGIN</h2>
-                        </div>
-                    </div>
-                    
-                    <!-- Login Form -->
-                    <div class="login-form" id="loginForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR CONTINUE WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Email/Username</label>
-                                <input type="text" class="form-input" placeholder="Enter your email or username">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Enter your password">
-                            </div>
-                            
-                            <div class="form-actions">
-                                <div class="remember-me">
-                                    <input type="checkbox" id="remember" class="remember-checkbox">
-                                    <label for="remember" class="remember-text">Remember me</label>
-                                </div>
-                                <a href="#" class="forgot-password">Forgot Password?</a>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">LOGIN</button>
-                        </form>
-                    </div>
-                    
-                    <!-- Signup Form (hidden by default) -->
-                    <div class="signup-form" id="signupForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR SIGN UP WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Full Name</label>
-                                <input type="text" class="form-input" placeholder="Enter your full name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Create a password">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Confirm Password</label>
-                                <input type="password" class="form-input" placeholder="Confirm your password">
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">SIGN UP</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="signup-container" id="sidebarContainer">
-                    <div class="signup-cta" id="loginSidebar">
-                        <h3 class="signup-title">NEW HERE?</h3>
-                        <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
-                        <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
-                    </div>
-                    
-                    <div class="signup-cta" id="signupSidebar" style="display: none;">
-                        <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
-                        <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
-                        <button class="submit-btn" id="showLoginBtn">LOGIN</button>
-                    </div>
-                </div>
-            </div>
         </div>
+        <div class="nav-icons" id="nav-column1">
+          <a href="#"
+            ><div class="user-icon" id="userIcon">
+              <img src="images/user.png" alt="user" /></div
+          ></a>
+          <a href="cart.html"
+            ><div class="cart-icon">
+              <img src="images/cart.png" alt="cart" /><span class="cart-count"
+                >0</span
+              >
+            </div></a
+          >
+        </div>
+      </nav>
+      <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">
+        ☰
+      </button>
+      <button
+        class="mobile-menu-toggle"
+        id="menu-toggle1"
+        onclick="closeMenu()"
+      >
+        ☰
+      </button>
+    </header>
+
+    <main>
+      <div class="user-profile-modal">
+        <div class="modal-header">
+          <div class="logo">
+            <img src="images/shop-logo.png" alt="Arman Salon Logo" />
+          </div>
+          <button class="close-button">×</button>
+        </div>
+        <div class="user-content">
+          <div class="user-avatar">
+            <div class="avatar-image">
+              <img src="images/user.png" />
+            </div>
+            <div class="username">Username</div>
+          </div>
+
+          <div class="user-details">
+            <div class="detail-item">
+              <div class="detail-icon"></div>
+              <div class="detail-content">
+                <div class="detail-label">Mobile Number</div>
+                <div class="detail-value">090909</div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon"></div>
+              <div class="detail-content">
+                <div class="detail-label">Email Address</div>
+                <div class="detail-value">email@mail.com</div>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon"></div>
+              <div class="detail-content">
+                <div class="detail-label">Address</div>
+                <div class="detail-value">7111 St.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider-modal"></div>
+
+          <div class="action-buttons">
+            <button class="btn-modal btn-modal-outline">Log Out</button>
+            <a href="payment.html" class="btn-modal btn-modal-primary"
+              >Payment Methods</a
+            >
+          </div>
+
+          <button class="edit-profile" onclick="modalEdit()">
+            Edit Profile →
+          </button>
+        </div>
+      </div>
+      <!-- Login Modal -->
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+          <button class="close-btn">×</button>
+
+          <div class="login-container">
+            <div class="modal-header">
+              <div class="modal-logo">
+                <img src="images/shop-logo.png" class="logo" />
+                <h2 class="form-title" id="modal-title">LOGIN</h2>
+              </div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="login-form" id="loginForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by signing in to your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Email/Username</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your email or username"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Enter your password"
+                  />
+                </div>
+
+                <div class="form-actions">
+                  <div class="remember-me">
+                    <input
+                      type="checkbox"
+                      id="remember"
+                      class="remember-checkbox"
+                    />
+                    <label for="remember" class="remember-text"
+                      >Remember me</label
+                    >
+                  </div>
+                  <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">LOGIN</button>
+              </form>
+            </div>
+
+            <!-- Signup Form (hidden by default) -->
+            <div class="signup-form" id="signupForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by creating your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Create a password"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Confirm your password"
+                  />
+                </div>
+
+                <button type="submit" class="submit-btn">SIGN UP</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="signup-container" id="sidebarContainer">
+            <div class="signup-cta" id="loginSidebar">
+              <h3 class="signup-title">NEW HERE?</h3>
+              <p class="signup-text">
+                Sign up and discover a great amount of new opportunities and
+                exclusive offers!
+              </p>
+              <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+            </div>
+
+            <div class="signup-cta" id="signupSidebar" style="display: none">
+              <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+              <p class="login-text">
+                Login to access your profile and enjoy exclusive benefits!
+              </p>
+              <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <section>
         <h2 class="section-title">Contacts</h2>
         <p class="section-subtitle">RESERVE YOUR LUXURIOUS EXPERIENCE</p>
         <div class="divider"></div>
         <div class="lower-container">
-            <div class="calendar" id="calendar">
-              <h2>MAY 2025</h2>
-              <div class="weekdays">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
+          <div class="calendar" id="calendar">
+            <h2>MAY 2025</h2>
+            <div class="weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="days">
+              <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="number" onclick="goToSchedule()">1</div>
+                <div class="number" onclick="goToSchedule()">2</div>
               </div>
-              <div class="days">
-                <div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div class="number" onclick="goToSchedule()">1</div>
-                  <div class="number" onclick="goToSchedule()">2</div>
-                </div>
-                <div>
-                  <div class="number" onclick="goToSchedule()">3</div>
-                  <div class="number" onclick="goToSchedule()">4</div>
-                  <div class="number" onclick="goToSchedule()">5</div>
-                  <div class="number" onclick="goToSchedule()">6</div>
-                  <div class="number" onclick="goToSchedule()">7</div>
-                  <div class="number" onclick="goToSchedule()">8</div>
-                  <div class="number" onclick="goToSchedule()">9</div>
-                </div>
-                <div>
-                  <div class="number" onclick="goToSchedule()">10</div>
-                  <div class="number" onclick="goToSchedule()">11</div>
-                  <div class="number" onclick="goToSchedule()">12</div>
-                  <div class="number" onclick="goToSchedule()">13</div>
-                  <div class="number" onclick="goToSchedule()">14</div>
-                  <div class="number" onclick="goToSchedule()">15</div>
-                  <div class="number" onclick="goToSchedule()">16</div>
-                </div>
-                <div>
-                  <div class="number" onclick="goToSchedule()">17</div>
-                  <div class="number" onclick="goToSchedule()">18</div>
-                  <div class="number" onclick="goToSchedule()">19</div>
-                  <div class="number" onclick="goToSchedule()">20</div>
-                  <div class="number" onclick="goToSchedule()">21</div>
-                  <div class="number" onclick="goToSchedule()">22</div>
-                  <div class="number" onclick="goToSchedule()">23</div>
-                </div>
-                <div>
-                  <div class="number" onclick="goToSchedule()">24</div>
-                  <div class="number" onclick="goToSchedule()">25</div>
-                  <div class="number" onclick="goToSchedule()">26</div>
-                  <div class="number" onclick="goToSchedule()">27</div>
-                  <div class="number" onclick="goToSchedule()">28</div>
-                  <div class="number" onclick="goToSchedule()">29</div>
-                  <div class="number" onclick="goToSchedule()">30</div>
-                </div>
-                <div>
-                  <div class="number" onclick="goToSchedule()">31</div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
+              <div>
+                <div class="number" onclick="goToSchedule()">3</div>
+                <div class="number" onclick="goToSchedule()">4</div>
+                <div class="number" onclick="goToSchedule()">5</div>
+                <div class="number" onclick="goToSchedule()">6</div>
+                <div class="number" onclick="goToSchedule()">7</div>
+                <div class="number" onclick="goToSchedule()">8</div>
+                <div class="number" onclick="goToSchedule()">9</div>
+              </div>
+              <div>
+                <div class="number" onclick="goToSchedule()">10</div>
+                <div class="number" onclick="goToSchedule()">11</div>
+                <div class="number" onclick="goToSchedule()">12</div>
+                <div class="number" onclick="goToSchedule()">13</div>
+                <div class="number" onclick="goToSchedule()">14</div>
+                <div class="number" onclick="goToSchedule()">15</div>
+                <div class="number" onclick="goToSchedule()">16</div>
+              </div>
+              <div>
+                <div class="number" onclick="goToSchedule()">17</div>
+                <div class="number" onclick="goToSchedule()">18</div>
+                <div class="number" onclick="goToSchedule()">19</div>
+                <div class="number" onclick="goToSchedule()">20</div>
+                <div class="number" onclick="goToSchedule()">21</div>
+                <div class="number" onclick="goToSchedule()">22</div>
+                <div class="number" onclick="goToSchedule()">23</div>
+              </div>
+              <div>
+                <div class="number" onclick="goToSchedule()">24</div>
+                <div class="number" onclick="goToSchedule()">25</div>
+                <div class="number" onclick="goToSchedule()">26</div>
+                <div class="number" onclick="goToSchedule()">27</div>
+                <div class="number" onclick="goToSchedule()">28</div>
+                <div class="number" onclick="goToSchedule()">29</div>
+                <div class="number" onclick="goToSchedule()">30</div>
+              </div>
+              <div>
+                <div class="number" onclick="goToSchedule()">31</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
               </div>
             </div>
-            <div class="time" id="time">
-              <div class="top-time">
-                <h4 onclick="goBackCalendar()">X</h4>
+          </div>
+          <div class="time" id="time">
+            <div class="top-time">
+              <h4 onclick="goBackCalendar()">X</h4>
+            </div>
+            <h2>Schedule</h2>
+            <div class="schedule-time">
+              <div
+                class="number"
+                id="number1"
+                onclick="selectNumber('number1')"
+              >
+                <p>8:00AM to 9:00AM</p>
               </div>
-              <h2>Schedule</h2>
-                <div class="schedule-time">
-                    <div class="number" id="number1" onclick="selectNumber('number1')"><p>8:00AM to 9:00AM</p></div>
-                    <div class="number" id="number2" onclick="selectNumber('number2')">8:00AM to 9:00AM</div>
-                    <div class="number" id="number3" onclick="selectNumber('number3')">8:00AM to 9:00AM</div>
-                    <div class="number" id="number4" onclick="selectNumber('number4')">8:00AM to 9:00AM</div>
-                    <div class="number" id="number5" onclick="selectNumber('number5')">8:00AM to 9:00AM</div>
-                    <div class="number" id="number6" onclick="selectNumber('number6')">8:00AM to 9:00AM</div>
-                    <div class="number" id="number7" onclick="selectNumber('number7')">8:00AM to 9:00AM</div>
-                    <div class="number" id="number8" onclick="selectNumber('number8')">8:00AM to 9:00AM</div>
-                </div>
+              <div
+                class="number"
+                id="number2"
+                onclick="selectNumber('number2')"
+              >
+                10:00AM to 11:00AM
+              </div>
+              <div
+                class="number"
+                id="number3"
+                onclick="selectNumber('number3')"
+              >
+                12:00AM to 1:00PM
+              </div>
+              <div
+                class="number"
+                id="number4"
+                onclick="selectNumber('number4')"
+              >
+                1:00PM to 2:00PM
+              </div>
+              <div
+                class="number"
+                id="number5"
+                onclick="selectNumber('number5')"
+              >
+                2:00PM to 3:00PM
+              </div>
+              <div
+                class="number"
+                id="number6"
+                onclick="selectNumber('number6')"
+              >
+                3:00PM to 4:00PM
+              </div>
+              <div
+                class="number"
+                id="number7"
+                onclick="selectNumber('number7')"
+              >
+                4:00PM to 5:00PM
+              </div>
             </div>
-        <form class="contact-form" onsubmit="return bookNow(event)">
+          </div>
+          <form class="contact-form" onsubmit="return bookNow(event)">
             <div class="contact-input">
-                <label>Name</label>
-                <input type="text" id="name" placeholder="Enter Name">
+              <label>Name</label>
+              <input type="text" id="name" placeholder="Enter Name" />
             </div>
             <div class="contact-input">
-                <label>Email</label>
-                <input type="email" id="email" placeholder="Enter Email">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="Enter Email" />
             </div>
             <div class="contact-input">
-                <label>Phone Number</label>
-                <input type="text" id="phone" class="phone-input" placeholder="Enter Phone Number">
+              <label>Phone Number</label>
+              <input
+                type="text"
+                id="phone"
+                class="phone-input"
+                placeholder="Enter Phone Number"
+              />
             </div>
             <div class="contact-input dropdown-form">
-                <label>Select a Staff</label>
-                <select id="staff">
-                    <option value="">--Select--</option>
-                    <option>Crizzia Agbu</option>
-                    <option>Aian Mhyco</option>
-                    <option>Hannah Grace</option>
-                    <option>Lance Fortaliza</option>
-                    <option>Lance Rivera</option>
-                    <option>Ivana Mia</option>
-                </select>
+              <label>Select a Staff</label>
+              <select id="staff">
+                <option value="">--Select--</option>
+                <option>Crizzia Agbu</option>
+                <option>Aian Mhyco</option>
+                <option>Hannah Grace</option>
+                <option>Lance Fortaliza</option>
+                <option>Lance Rivera</option>
+                <option>Ivana Mia</option>
+              </select>
             </div>
             <div class="contact-input dropdown-form">
-                <label>Select a Service</label>
-                <select id="service">
-                    <option value="">--Select--</option>
-                    <option>Valentine Glow Package</option>
-                    <option>--Manicure Services--</option>
-                    <option>Basic Manicure</option>
-                    <option>Acrylic Nail Extension</option>
-                    <option>Polygel Nail Extension</option>
-                    <option>Press-on Nails</option>
-                    <option>Gel French Manicure</option>
-                    <option>Cat’s Eye Gel Manicure</option>
-                    <option>Ombre Manicure</option>
-                    <option>3D Nail Art</option>\
-                    <option>--Hair Services--</option>
-                    <option>Regular Perm</option>
-                    <option>Digital Permn</option>
-                    <option>C-Shape Curl</option>
-                    <option>Rebonding</option>
-                    <option>S-Shape Curl</option>
-                    <option>Haircut</option>
-                    <option>Brazilian Blowout</option>
-                    <option>Highlights</option>
-                    <option>--Pedicure Services--</option>
-                    <option>Basic Pedicure</option>
-                    <option>Gel Pedicure</option>
-                    <option>Gel French Pedicure</option>
-                    <option>Cat’s Eye Gel Pedicure</option>
-                    <option>Ombre Pedicure</option>
-                    <option>Gel Nail Art Pedicure</option>
-                    <option>Callus Removal Pedicure</option>
-                    <option>Spa Pedicure</option>
-                    <option>--Makeup Services--</option>
-                    <option>Sun-Kissed Perfection</option>
-                    <option>Soft Chic</option>
-                    <option>Latte Glam</option>
-                    <option>Red & Radiant</option>
-                    <option>Elegant & Rosy Finish</option>
-                    <option>Naturally Radiant</option>
-                    <option>Sophisticated Glamour</option>
-                    <option>Glossy Glow-up</option>
-                    <option>--Eyelash Services--</option>
-                    <option>Natural</option>
-                    <option>Anime</option>
-                    <option>Siren Flare</option>
-                    <option>Wet Look</option>
-                    <option>Mermaid Wispy</option>
-                    <option>Fox Eye</option>
-                    <option>Doll Eye Lashes</option>
-                    <option>Volume Mega Lash Extensions</option>
-                </select>
+              <label>Select a Service</label>
+              <select id="service">
+                <option value="">--Select--</option>
+                <option>Valentine Glow Package</option>
+                <option>--Manicure Services--</option>
+                <option>Basic Manicure</option>
+                <option>Acrylic Nail Extension</option>
+                <option>Polygel Nail Extension</option>
+                <option>Press-on Nails</option>
+                <option>Gel French Manicure</option>
+                <option>Cat’s Eye Gel Manicure</option>
+                <option>Ombre Manicure</option>
+                <option>3D Nail Art</option>
+                \
+                <option>--Hair Services--</option>
+                <option>Regular Perm</option>
+                <option>Digital Permn</option>
+                <option>C-Shape Curl</option>
+                <option>Rebonding</option>
+                <option>S-Shape Curl</option>
+                <option>Haircut</option>
+                <option>Brazilian Blowout</option>
+                <option>Highlights</option>
+                <option>--Pedicure Services--</option>
+                <option>Basic Pedicure</option>
+                <option>Gel Pedicure</option>
+                <option>Gel French Pedicure</option>
+                <option>Cat’s Eye Gel Pedicure</option>
+                <option>Ombre Pedicure</option>
+                <option>Gel Nail Art Pedicure</option>
+                <option>Callus Removal Pedicure</option>
+                <option>Spa Pedicure</option>
+                <option>--Makeup Services--</option>
+                <option>Sun-Kissed Perfection</option>
+                <option>Soft Chic</option>
+                <option>Latte Glam</option>
+                <option>Red & Radiant</option>
+                <option>Elegant & Rosy Finish</option>
+                <option>Naturally Radiant</option>
+                <option>Sophisticated Glamour</option>
+                <option>Glossy Glow-up</option>
+                <option>--Eyelash Services--</option>
+                <option>Natural</option>
+                <option>Anime</option>
+                <option>Siren Flare</option>
+                <option>Wet Look</option>
+                <option>Mermaid Wispy</option>
+                <option>Fox Eye</option>
+                <option>Doll Eye Lashes</option>
+                <option>Volume Mega Lash Extensions</option>
+              </select>
             </div>
             <button type="submit" onclick="bookNow()">BOOK NOW</button>
-        </form>
+          </form>
         </div>
       </section>
-
-  </main>
-<footer>
-    <div class="footer-section">
+    </main>
+    <footer>
+      <div class="footer-section">
         <h3>Information</h3>
         <ul>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="faq.html">Terms and Services</a></li>
-            <li><a href="faq.html">Privacy and Policy</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="faq.html">Terms and Services</a></li>
+          <li><a href="faq.html">Privacy and Policy</a></li>
         </ul>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Products</h3>
         <ul>
-            <li><a href="product.html#nails">Nails</a></li>
-            <li><a href="product.html#hair">Hair</a></li>
-            <li><a href="product.html#skincare">Skincare</a></li>
+          <li><a href="product.html#nails">Nails</a></li>
+          <li><a href="product.html#hair">Hair</a></li>
+          <li><a href="product.html#skincare">Skincare</a></li>
         </ul>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Services</h3>
         <ul>
-            <li><a href="services.html#manicure">Manicure</a></li>
-            <li><a href="services.html#hair">Hair</a></li>
-            <li><a href="services.html#pedicure">Pedicure</a></li>
-            <li><a href="services.html#makeup">Makeup</a></li>
-            <li><a href="services.html#eyelashes">Eyelash</a></li>
+          <li><a href="services.html#manicure">Manicure</a></li>
+          <li><a href="services.html#hair">Hair</a></li>
+          <li><a href="services.html#pedicure">Pedicure</a></li>
+          <li><a href="services.html#makeup">Makeup</a></li>
+          <li><a href="services.html#eyelashes">Eyelash</a></li>
         </ul>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Stay Connected</h3>
-        <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+        <p>
+          Subscribe to get exclusive offers, beauty tips, and the latest updates
+          straight to your inbox.
+        </p>
         <form class="subscription-form">
-            <input type="email" placeholder="Your Email">
-            <button type="submit">Subscribe</button>
+          <input type="email" placeholder="Your Email" id="email" />
+          <button type="submit">Subscribe</button>
         </form>
-    </div>
-    <div class="footer-section">
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section"></div>
+      <div class="footer-section">
         <h3>Visit Us</h3>
         <p>123 Elegance Avenue</p>
         <p>Luxury District, City</p>
         <p>ZIP Code</p>
-    </div>
-    <div class="footer-section">
+      </div>
+      <div class="footer-section">
         <h3>Working Hours</h3>
         <p>Monday - Friday: 8:00AM - 7:00PM</p>
         <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
-    </div>
-  </footer>
-</body>
-<script src="script/modal.js"></script>
-<script src="script/contact.js"></script>
+      </div>
+    </footer>
+  </body>
+  <script src="script/modal.js"></script>
+  <script src="script/contact.js"></script>
 </html>
