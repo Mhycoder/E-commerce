@@ -1,280 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/nav-footer.css">
-    <link rel="stylesheet" href="../css/product-view.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/nav-footer.css" />
+    <link rel="stylesheet" href="../css/product-view.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Product Name</title>
-</head>
-<body>
-  <header>
-    <div class="logo">
-        <img src="../images/shop-logo.png" alt="Arman Salon Logo">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../images/shop-logo.png" alt="Arman Salon Logo" />
         <span class="logo-text">ARMAN SALON</span>
-    </div>
-    <nav>
+      </div>
+      <nav>
         <div class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="../about.html">About</a>
-            <div class="dropdown">
-                <a href="../product.html">Products</a>
-                <div class="dropdown-content">
-                    <a href="../prod-list.html">Store</a>
-                </div>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <div class="dropdown">
+            <a href="../product.html">Products</a>
+            <div class="dropdown-content">
+              <a href="../prod-list.html">Store</a>
             </div>
-            <a href="../services.html">Services</a>
-            <a href="../contacts.html">Contacts</a>
-            <a href="../faq.html">FAQ</a>
+          </div>
+          <a href="../services.html">Services</a>
+          <a href="../contacts.html">Contacts</a>
+          <a href="../faq.html">FAQ</a>
         </div>
         <div class="nav-icons">
-            <a><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-            <a href="../cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+          <a
+            ><div class="user-icon" id="userIcon">
+              <img src="../images/user.png" /></div
+          ></a>
+          <a href="../cart.html"
+            ><div class="cart-icon"><img src="../images/cart.png" /></div
+          ></a>
         </div>
-    </nav>        
-  </header>
+      </nav>
+    </header>
     <main>
-        <!-- Login Modal -->
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal-container">
-                <button class="close-btn">×</button>
-                
-                <div class="login-container">
-                    <div class="modal-header">
-                        <div class="modal-logo">
-                            <img src="../images/shop-logo.png" class="logo">
-                            <h2 class="form-title" id="modal-title">LOGIN</h2>
-                        </div>
-                    </div>
-                    
-                    <!-- Login Form -->
-                    <div class="login-form" id="loginForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="../images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR CONTINUE WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Email/Username</label>
-                                <input type="text" class="form-input" placeholder="Enter your email or username">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Enter your password">
-                            </div>
-                            
-                            <div class="form-actions">
-                                <div class="remember-me">
-                                    <input type="checkbox" id="remember" class="remember-checkbox">
-                                    <label for="remember" class="remember-text">Remember me</label>
-                                </div>
-                                <a href="#" class="forgot-password">Forgot Password?</a>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">LOGIN</button>
-                        </form>
-                    </div>
-                    
-                    <!-- Signup Form (hidden by default) -->
-                    <div class="signup-form" id="signupForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="../images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR SIGN UP WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Full Name</label>
-                                <input type="text" class="form-input" placeholder="Enter your full name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Create a password">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Confirm Password</label>
-                                <input type="password" class="form-input" placeholder="Confirm your password">
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">SIGN UP</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="signup-container" id="sidebarContainer">
-                    <div class="signup-cta" id="loginSidebar">
-                        <h3 class="signup-title">NEW HERE?</h3>
-                        <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
-                        <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
-                    </div>
-                    
-                    <div class="signup-cta" id="signupSidebar" style="display: none;">
-                        <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
-                        <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
-                        <button class="submit-btn" id="showLoginBtn">LOGIN</button>
-                    </div>
-                </div>
+      <!-- Login Modal -->
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+          <button class="close-btn">×</button>
+
+          <div class="login-container">
+            <div class="modal-header">
+              <div class="modal-logo">
+                <img src="../images/shop-logo.png" class="logo" />
+                <h2 class="form-title" id="modal-title">LOGIN</h2>
+              </div>
             </div>
+
+            <!-- Login Form -->
+            <div class="login-form" id="loginForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by signing in to your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="../images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Email/Username</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your email or username"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Enter your password"
+                  />
+                </div>
+
+                <div class="form-actions">
+                  <div class="remember-me">
+                    <input
+                      type="checkbox"
+                      id="remember"
+                      class="remember-checkbox"
+                    />
+                    <label for="remember" class="remember-text"
+                      >Remember me</label
+                    >
+                  </div>
+                  <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">LOGIN</button>
+              </form>
+            </div>
+
+            <!-- Signup Form (hidden by default) -->
+            <div class="signup-form" id="signupForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by creating your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="../images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Create a password"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Confirm your password"
+                  />
+                </div>
+
+                <button type="submit" class="submit-btn">SIGN UP</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="signup-container" id="sidebarContainer">
+            <div class="signup-cta" id="loginSidebar">
+              <h3 class="signup-title">NEW HERE?</h3>
+              <p class="signup-text">
+                Sign up and discover a great amount of new opportunities and
+                exclusive offers!
+              </p>
+              <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+            </div>
+
+            <div class="signup-cta" id="signupSidebar" style="display: none">
+              <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+              <p class="login-text">
+                Login to access your profile and enjoy exclusive benefits!
+              </p>
+              <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+            </div>
+          </div>
         </div>
-        <div class="product-view">
-            <div class="breadcrumb">
-                <a href="#">PRODUCTS</a> <span>/</span> <a href="#">CATEGORY</a> <span>/</span> <a href="#">TYPE OF PRODUCT</a> <span>/</span> PRODUCT NAME
+      </div>
+      <div class="product-view">
+        <div class="breadcrumb">
+          <a href="../product.html">PRODUCTS</a> <span>/</span>
+          <a href="../product.html#skincare">SKINCARE</a> <span>/</span>
+          <a href="../prod-list\prod-list21.html">SUNSCREEN</a>
+          <span>/</span> DR SENSITIVE TINTED SUNSCREEN SPF60++++
+        </div>
+        <div class="product-detail">
+          <div class="product-gallery">
+            <div class="main-image" id="main-image">
+              <img
+                src="../prod-list\prod-img/sunsc3.avif"
+                alt="DR SENSITIVE Tinted Sunscreen SPF60++++"
+              />
             </div>
-            <div class="product-detail">
-                <div class="product-gallery">
-                    <div class="main-image">
-                        <img src="#" alt="main image">
+            <div class="thumbnails">
+              <div class="thumbnail active" id="image1">
+                <img
+                  src="../prod-list/prod-img/sunsc3.avif"
+                  alt="picture angle 1"
+                />
+              </div>
+              <div class="thumbnail" id="image2">
+                <img
+                  src="../prodview-img/pv_suns3-1.avif"
+                  alt="picture angle 2"
+                />
+              </div>
+              <div class="thumbnail" id="image3">
+                <img
+                  src="../prodview-img/pv_suns3-2.jpg"
+                  alt="picture angle 2"
+                />
+              </div>
+              <div class="thumbnail" id="image4">
+                <img
+                  src="../prodview-img/pv_suns3-3.jpg"
+                  alt="picture angle 2"
+                />
+              </div>
+            </div>
+            <div class="share">
+              <div class="share-label">SHARE:</div>
+              <div class="social-icons">
+                <a href="https://www.facebook.com" class="social-icon">
+                  <img src="../images/facebook.png" alt="facebook" />
+                </a>
+                <a href="https://www.instagram.com/" class="social-icon">
+                  <img src="../images/instagram.webp" alt="instagram" />
+                </a>
+                <a href="https://x.com/" class="social-icon">
+                  <img src="../images/x-twitter.jpg" alt="x twitter" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">
+              DR SENSITIVE Tinted Sunscreen SPF60++++
+            </h1>
+            <div class="product-price">₱ 349.00</div>
+            <input type="text" id="price" value="349"></input>
+
+            <div class="product-meta">
+              <div class="meta-row description-column">
+                <div class="meta-label">DESCRIPTION:</div>
+                <p>
+                  Help protect your skin from sun damage with Dr. Sensitive ®
+                  Tinted Sunscreen SFP 50+ PA++++. This broad spectrum sunscreen
+                  comes with a sheer touch of color to provide a natural looking
+                  finish to your skin with no white cast.
+                </p>
+              </div>
+              <div class="meta-row">
+                <div class="meta-label">SHIPPING:</div>
+                <p>2-3 Days</p>
+              </div>
+
+              <div class="meta-row">
+                <div class="meta-label">SIZE:</div>
+                <div class="meta-value">
+                  <div class="size-options">
+                    <div
+                      class="size-option"
+                      id="option1"
+                      onclick="activeOption1()"
+                    >
+                      Shade 1
                     </div>
-                    <div class="thumbnails">
-                        <div class="thumbnail active">
-                            <img src="#" alt="picture angle 1">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 2">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 3">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 4">
-                        </div>
+                    <div
+                      class="size-option"
+                      id="option2"
+                      onclick="activeOption2()"
+                    >
+                      Shade 2
                     </div>
-                    <div class="share">
-                        <div class="share-label">SHARE:</div>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">
-                                <img src="#" alt="facebook">
-                            </a>
-                            <a href="#" class="social-icon">
-                                <img src="#" alt="instagram">
-                            </a>
-                            <a href="#" class="social-icon">
-                                <img src="#" alt="x twitter">
-                            </a>
-                        </div>
-                    </div>
+                    <div class="size-option" id="option3"></div>
+                    <div class="size-option" id="option4"></div>
+                  </div>
                 </div>
-                <div class="product-info">
-                    <h1 class="product-title">Product Name</h1>
-                    <div class="product-price">₱ 9,999</div>
-                    
-                    <div class="product-meta">
-                        <div class="meta-row description-column">
-                            <div class="meta-label">DESCRIPTION</div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ullam tenetur reiciendis! Consequatur ullam animi assumenda tempore ducimus, tempora culpa, vel sunt blanditiis non asperiores veniam enim obcaecati. Consequuntur, ducimus.</p>
-                        </div>
-                        <div class="meta-row">
-                            <div class="meta-label">SHIPPING</div>
-                            <p>2-3 Days</p>
-                        </div>
-                        
-                        <div class="meta-row">
-                            <div class="meta-label">SIZE</div>
-                            <div class="meta-value">
-                                <div class="size-options">
-                                    <div class="size-option active">S</div>
-                                    <div class="size-option">M</div>
-                                    <div class="size-option">L</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="meta-row">
-                            <div class="meta-label">QUANTITY</div>
+              </div>
+               <div class="meta-row">
+                            <div class="meta-label">QUANTITY:</div>
                             <div class="meta-value">
                                 <div class="quantity-selector">
-                                    <button class="quantity-button">-</button>
-                                    <input type="text" class="quantity-input" value="1">
-                                    <button class="quantity-button">+</button>
+                                    <button class="quantity-button" id="quantity-decrease">-</button>
+                                    <input type="text" class="quantity-input" value="1" id="quantity">
+                                    <button class="quantity-button" id="quantity-increase">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product-actions">
-                        <button class="btn btn-primary">ADD TO CART</button>
-                        <button class="btn btn-secondary">BUY NOW</button>
-                    </div>
-                </div>
+            <div class="product-actions">
+              <button class="btn btn-primary" onclick="addToCart('DR SENSITIVE Tinted Sunscreen SPF60++++')">ADD TO CART</button>
+              <button class="btn btn-secondary" onclick="buyNow('DR SENSITIVE Tinted Sunscreen SPF60++++')">BUY NOW</button>
             </div>
+          </div>
         </div>
+      </div>
     </main>
 
-
-  <footer>
+    <footer>
       <div class="footer-section">
-          <h3>Information</h3>
-          <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Terms and Services</a></li>
-              <li><a href="#">Privacy and Policy</a></li>
-          </ul>
+        <h3>Information</h3>
+        <ul>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../faq.html">Terms and Services</a></li>
+          <li><a href="../faq.html">Privacy and Policy</a></li>
+        </ul>
       </div>
       <div class="footer-section">
-          <h3>Products</h3>
-          <ul>
-              <li><a href="#">Nails</a></li>
-              <li><a href="#">Hair</a></li>
-              <li><a href="#">Skincare</a></li>
-          </ul>
+        <h3>Products</h3>
+        <ul>
+          <li><a href="../product.html#nails">Nails</a></li>
+          <li><a href="../product.html#hair">Hair</a></li>
+          <li><a href="../product.html#skincare">Skincare</a></li>
+        </ul>
       </div>
       <div class="footer-section">
-          <h3>Services</h3>
-          <ul>
-              <li><a href="#">Manicure</a></li>
-              <li><a href="#">Hair</a></li>
-              <li><a href="#">Pedicure</a></li>
-              <li><a href="#">Makeup</a></li>
-              <li><a href="#">Eyelash</a></li>
-          </ul>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="../services.html#manicure">Manicure</a></li>
+          <li><a href="../services.html#hair">Hair</a></li>
+          <li><a href="../services.html#pedicure">Pedicure</a></li>
+          <li><a href="../services.html#makeup">Makeup</a></li>
+          <li><a href="../services.html#eyelashes">Eyelash</a></li>
+        </ul>
       </div>
       <div class="footer-section">
-          <h3>Stay Connected</h3>
-          <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
-          <form class="subscription-form">
-              <input type="email" placeholder="Your Email">
-              <button type="submit">Subscribe</button>
-          </form>
+        <h3>Stay Connected</h3>
+        <p>
+          Subscribe to get exclusive offers, beauty tips, and the latest updates
+          straight to your inbox.
+        </p>
+        <form class="subscription-form">
+          <input type="email" placeholder="Your Email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-section"></div>
+      <div class="footer-section">
+        <h3>Visit Us</h3>
+        <p>123 Elegance Avenue</p>
+        <p>Quezon City</p>
+        <p>0909</p>
       </div>
       <div class="footer-section">
+        <h3>Working Hours</h3>
+        <p>Monday - Friday: 8:00AM - 7:00PM</p>
+        <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
       </div>
-      <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>123 Elegance Avenue</p>
-          <p>Luxury District, City</p>
-          <p>ZIP Code</p>
-      </div>
-      <div class="footer-section">
-          <h3>Working Hours</h3>
-          <p>Monday - Friday: 8:00AM - 7:00PM</p>
-          <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
-      </div>
-  </footer>
-</body>
-<script src="../script/script.js"></script>
+    </footer>
+  </body>
+  <script src="../script/modal.js"></script>
+  <script src="../script/product-view.js"></script>
+  <script src="../script/cart.js"></script>
 </html>

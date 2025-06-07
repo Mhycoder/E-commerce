@@ -29,8 +29,8 @@
             <a href="../faq.html">FAQ</a>
         </div>
         <div class="nav-icons">
-            <a><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-            <a href="../cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+            <a><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
+            <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
         </div>
     </nav>        
   </header>
@@ -145,80 +145,80 @@
         </div>
         <div class="product-view">
             <div class="breadcrumb">
-                <a href="#">PRODUCTS</a> <span>/</span> <a href="#">CATEGORY</a> <span>/</span> <a href="#">TYPE OF PRODUCT</a> <span>/</span> PRODUCT NAME
+                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#skincare">SKINCARE</a> <span>/</span> <a href="../prod-list\prod-list19.html">TONER</a> <span>/</span> FRESH SKINLAB K-ALOE ICE 3 IN 1 NIACINAMIDE DARK SPOT PH 5.5 TONER 
+
+
             </div>
             <div class="product-detail">
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="#" alt="main image">
+                        <img src="../prod-list\prod-img/toner3.webp" alt="FRESH Skinlab K-Aloe Ice 3 in 1 Niacinamide Dark Spot Ph 5.5 Toner">
                     </div>
                     <div class="thumbnails">
-                        <div class="thumbnail active">
-                            <img src="#" alt="picture angle 1">
+                        <div class="thumbnail active" id="image1">
+                            <img src="../prod-list/prod-img/toner3.webp" alt="picture angle 1">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 2">
+                        <div class="thumbnail" id="image2">
+                            <img src="../prodview-img/pv_toner3-1.webp" alt="picture angle 2">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 3">
+                         <div class="thumbnail" id="image3">
+                            <img src="../prodview-img/pv_toner3-2.webp" alt="picture angle 2">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 4">
-                        </div>
+                        <div id="image4"></div>
+                       
                     </div>
                     <div class="share">
                         <div class="share-label">SHARE:</div>
                         <div class="social-icons">
                             <a href="#" class="social-icon">
-                                <img src="#" alt="facebook">
+                                <img src="../images/facebook.png" alt="facebook">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="#" alt="instagram">
+                                <img src="../images/instagram.webp" alt="instagram">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="#" alt="x twitter">
+                                <img src="../images/x-twitter.jpg" alt="x twitter">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h1 class="product-title">Product Name</h1>
-                    <div class="product-price">₱ 9,999</div>
+                    <h1 class="product-title">FRESH Skinlab K-Aloe Ice 3 in 1 Niacinamide Dark Spot Ph 5.5 Toner</h1>
+                    <div class="product-price">₱ 219.00</div>
+                    <input type="text" id="price" value="219"></input>
                     
                     <div class="product-meta">
                         <div class="meta-row description-column">
-                            <div class="meta-label">DESCRIPTION</div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ullam tenetur reiciendis! Consequatur ullam animi assumenda tempore ducimus, tempora culpa, vel sunt blanditiis non asperiores veniam enim obcaecati. Consequuntur, ducimus.</p>
+                            <div class="meta-label">DESCRIPTION:</div>
+                            <p>Treat your skin with this Toner from Fresh Skinlab. Infused with Aloe Vera extracts from Jeju, this Toner balances pH level and gives antioxidants that keep your skin hydrated and refreshed. Good for all skin types and free from Alcohol and Parabens.</p>
                         </div>
                         <div class="meta-row">
-                            <div class="meta-label">SHIPPING</div>
+                            <div class="meta-label">SHIPPING:</div>
                             <p>2-3 Days</p>
                         </div>
                         
                         <div class="meta-row">
-                            <div class="meta-label">SIZE</div>
+                            <div class="meta-label">SIZE:</div>
                             <div class="meta-value">
                                 <div class="size-options">
-                                    <div class="size-option active">S</div>
-                                    <div class="size-option">M</div>
-                                    <div class="size-option">L</div>
+                                    <div class="size-option active">100 ml</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="meta-row">
-                            <div class="meta-label">QUANTITY</div>
+                          <div class="meta-row">
+                            <div class="meta-label">QUANTITY:</div>
                             <div class="meta-value">
                                 <div class="quantity-selector">
-                                    <button class="quantity-button">-</button>
-                                    <input type="text" class="quantity-input" value="1">
-                                    <button class="quantity-button">+</button>
+                                    <button class="quantity-button" id="quantity-decrease">-</button>
+                                    <input type="text" class="quantity-input" value="1" id="quantity">
+                                    <button class="quantity-button" id="quantity-increase">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-actions">
-                        <button class="btn btn-primary">ADD TO CART</button>
-                        <button class="btn btn-secondary">BUY NOW</button>
+                        <button class="btn btn-primary" onclick="addToCart('FRESH Skinlab K-Aloe Ice 3 in 1 Niacinamide Dark Spot Ph 5.5 Toner')">ADD TO CART</button>
+                        <button class="btn btn-secondary" onclick="buyNow('FRESH Skinlab K-Aloe Ice 3 in 1 Niacinamide Dark Spot Ph 5.5 Toner')">BUY NOW</button>
                     </div>
                 </div>
             </div>
@@ -276,5 +276,7 @@
       </div>
   </footer>
 </body>
-<script src="../script/script.js"></script>
+<script src="../script/modal.js"></script>
+<script src="../script/product-view.js"></script>
+<script src="../script/cart.js"></script>
 </html>

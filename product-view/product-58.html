@@ -29,8 +29,8 @@
             <a href="../faq.html">FAQ</a>
         </div>
         <div class="nav-icons">
-            <a><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-            <a href="../cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+            <a><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
+            <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
         </div>
     </nav>        
   </header>
@@ -145,80 +145,89 @@
         </div>
         <div class="product-view">
             <div class="breadcrumb">
-                <a href="#">PRODUCTS</a> <span>/</span> <a href="#">CATEGORY</a> <span>/</span> <a href="#">TYPE OF PRODUCT</a> <span>/</span> PRODUCT NAME
+                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#hair">HAIR</a> <span>/</span> <a href="../prod-list\prod-list15.html">HAIR COLOR</a> <span>/</span>  L'ORÉAL PARIS CASTING CREME GLOSS SEMI-PERMANENT HAIR DYE 
+
+
+
+
+
             </div>
             <div class="product-detail">
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="#" alt="main image">
+                        <img src="../prod-list\prod-img/h_gcolor1.avif" alt="L'Oréal Paris Casting Creme Gloss Semi-Permanent Hair Dye">
                     </div>
                     <div class="thumbnails">
-                        <div class="thumbnail active">
-                            <img src="#" alt="picture angle 1">
+                        <div class="thumbnail active" id="image1">
+                            <img src="../prod-list/prod-img/h_gcolor1.avif" alt="picture angle 1">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 2">
+                        <div class="thumbnail" id="image2">
+                            <img src="../prodview-img/pvh_lcolor2.avif" alt="picture angle 2">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 3">
+                         <div class="thumbnail" id="image3">
+                            <img src="../prodview-img/pvh_lcolor3.avif" alt="picture angle 3">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 4">
+                        <div class="thumbnail" id="image4">
+                            <img src="../prodview-img/pvh_lcolor4.avif" alt="picture angle 3">
                         </div>
+                      
                     </div>
                     <div class="share">
                         <div class="share-label">SHARE:</div>
                         <div class="social-icons">
                             <a href="#" class="social-icon">
-                                <img src="#" alt="facebook">
+                                <img src="../images/facebook.png" alt="facebook">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="#" alt="instagram">
+                                <img src="../images/instagram.webp" alt="instagram">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="#" alt="x twitter">
+                                <img src="../images/x-twitter.jpg" alt="x twitter">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h1 class="product-title">Product Name</h1>
-                    <div class="product-price">₱ 9,999</div>
+                    <h1 class="product-title">L'Oréal Paris Casting Creme Gloss Semi-Permanent Hair Dye</h1>
+                    <div class="product-price">₱ 927.00</div>
+                    <input type="text" id="price" value="927"></input>
                     
                     <div class="product-meta">
                         <div class="meta-row description-column">
-                            <div class="meta-label">DESCRIPTION</div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ullam tenetur reiciendis! Consequatur ullam animi assumenda tempore ducimus, tempora culpa, vel sunt blanditiis non asperiores veniam enim obcaecati. Consequuntur, ducimus.</p>
+                            <div class="meta-label">DESCRIPTION:</div>
+                            <p>  This is an ammonia-free semi-permanent hair dye. This hair color solution is an easy and effective option for those who want to dye their hair at home. It will not only give the hair sublime shine but also grant full coverage, even on grey hair. </p>
                         </div>
                         <div class="meta-row">
-                            <div class="meta-label">SHIPPING</div>
+                            <div class="meta-label">SHIPPING:</div>
                             <p>2-3 Days</p>
                         </div>
                         
                         <div class="meta-row">
-                            <div class="meta-label">SIZE</div>
+                            <div class="meta-label">SIZE:</div>
                             <div class="meta-value">
                                 <div class="size-options">
-                                    <div class="size-option active">S</div>
-                                    <div class="size-option">M</div>
-                                    <div class="size-option">L</div>
-                                </div>
+                                    <div class="size-option ">0.1</div>
+                                    <div class="size-option ">0.2</div>
+                                    <div class="size-option ">0.3</div>
+                                    <div class="size-option ">0.4</div>
+                                   
+                            </div>
                             </div>
                         </div>
-                        <div class="meta-row">
-                            <div class="meta-label">QUANTITY</div>
+                         <div class="meta-row">
+                            <div class="meta-label">QUANTITY:</div>
                             <div class="meta-value">
                                 <div class="quantity-selector">
-                                    <button class="quantity-button">-</button>
-                                    <input type="text" class="quantity-input" value="1">
-                                    <button class="quantity-button">+</button>
+                                    <button class="quantity-button" id="quantity-decrease">-</button>
+                                    <input type="text" class="quantity-input" value="1" id="quantity">
+                                    <button class="quantity-button" id="quantity-increase">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-actions">
-                        <button class="btn btn-primary">ADD TO CART</button>
-                        <button class="btn btn-secondary">BUY NOW</button>
+                        <button class="btn btn-primary" onclick="addToCart('L’Oréal Paris Casting Creme Gloss Semi-Permanent Hair Dye')">ADD TO CART</button>
+                        <button class="btn btn-secondary" onclick="buyNow('L’Oréal Paris Casting Creme Gloss Semi-Permanent Hair Dye')">BUY NOW</button>
                     </div>
                 </div>
             </div>
@@ -276,5 +285,7 @@
       </div>
   </footer>
 </body>
-<script src="../script/script.js"></script>
+<script src="../script/modal.js"></script>
+<script src="../script/product-view.js"></script>
+<script src="../script/cart.js"></script>
 </html>

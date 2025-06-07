@@ -1,282 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/nav-footer.css">
-    <link rel="stylesheet" href="../css/product-view.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/nav-footer.css" />
+    <link rel="stylesheet" href="../css/product-view.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>Product Name</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    <div class="header-container">
+      <div class="header-container">
         <div class="logo">
-            <img src="../images/shop-logo.png" alt="Arman Salon Logo">
-            <span class="logo-text">ARMAN SALON</span>
+          <img src="../images/shop-logo.png" alt="Arman Salon Logo" />
+          <span class="logo-text">ARMAN SALON</span>
         </div>
-    </div>
-    <nav>
+      </div>
+      <nav>
         <div class="nav-links" id="nav-column">
-            <a href="../index.html">Home</a>
-            <a href="../about.html">About</a>
-            <div class="dropdown">
-                <a href="../product.html">Products</a>
-                <div class="dropdown-content">
-                    <a href="../prod-list/prod-list1.html">Store</a>
-                </div>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <div class="dropdown">
+            <a href="../product.html">Products</a>
+            <div class="dropdown-content">
+              <a href="../prod-list/prod-list1.html">Store</a>
             </div>
-            <a href="../services.html">Services</a>
-            <a href="../contacts.html">Contacts</a>
-            <a href="../faq.html">FAQ</a>
+          </div>
+          <a href="../services.html">Services</a>
+          <a href="../contacts.html">Contacts</a>
+          <a href="../faq.html">FAQ</a>
         </div>
         <div class="nav-icons" id="nav-column1">
-            <a href="#"><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
-            <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
+          <a href="#"
+            ><div class="user-icon" id="userIcon">
+              <img src="../images/user.png" /></div
+          ></a>
+          <a href="../cart.html"
+            ><div class="cart-icon"><img src="../images/cart.png" /></div
+          ></a>
         </div>
-    </nav>  
-    <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">☰</button>
-    <button class="mobile-menu-toggle" id="menu-toggle1" onclick="closeMenu()">☰</button>           
+      </nav>
+      <button class="mobile-menu-toggle" id="menu-toggle" onclick="openMenu()">
+        ☰
+      </button>
+      <button
+        class="mobile-menu-toggle"
+        id="menu-toggle1"
+        onclick="closeMenu()"
+      >
+        ☰
+      </button>
     </header>
     <main>
-        <!-- Login Modal -->
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal-container">
-                <button class="close-btn">×</button>
-                
-                <div class="login-container">
-                    <div class="modal-header">
-                        <div class="modal-logo">
-                            <img src="../images/shop-logo.png" class="logo">
-                            <h2 class="form-title" id="modal-title">LOGIN</h2>
-                        </div>
-                    </div>
-                    
-                    <!-- Login Form -->
-                    <div class="login-form" id="loginForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by signing in to your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="../images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR CONTINUE WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Email/Username</label>
-                                <input type="text" class="form-input" placeholder="Enter your email or username">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Enter your password">
-                            </div>
-                            
-                            <div class="form-actions">
-                                <div class="remember-me">
-                                    <input type="checkbox" id="remember" class="remember-checkbox">
-                                    <label for="remember" class="remember-text">Remember me</label>
-                                </div>
-                                <a href="#" class="forgot-password">Forgot Password?</a>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">LOGIN</button>
-                        </form>
-                    </div>
-                    
-                    <!-- Signup Form (hidden by default) -->
-                    <div class="signup-form" id="signupForm">
-                        <p class="subtitle">Enjoy the exclusive benefits by creating your account.</p>
-                        
-                        <div class="social-login">
-                            <div class="social-btn">
-                                <img src="../images/facebook.png" alt="facebook">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/instagram.webp" alt="instagram">
-                            </div>
-                            <div class="social-btn">
-                                <img src="../images/x-twitter.jpg" alt="x twitter">
-                            </div>
-                        </div>
-                        
-                        <div class="divider-form">OR SIGN UP WITH EMAIL</div>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label class="form-label">Full Name</label>
-                                <input type="text" class="form-input" placeholder="Enter your full name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-input" placeholder="Create a password">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Confirm Password</label>
-                                <input type="password" class="form-input" placeholder="Confirm your password">
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">SIGN UP</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="signup-container" id="sidebarContainer">
-                    <div class="signup-cta" id="loginSidebar">
-                        <h3 class="signup-title">NEW HERE?</h3>
-                        <p class="signup-text">Sign up and discover a great amount of new opportunities and exclusive offers!</p>
-                        <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
-                    </div>
-                    
-                    <div class="signup-cta" id="signupSidebar" style="display: none;">
-                        <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
-                        <p class="login-text">Login to access your profile and enjoy exclusive benefits!</p>
-                        <button class="submit-btn" id="showLoginBtn">LOGIN</button>
-                    </div>
-                </div>
+      <!-- Login Modal -->
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+          <button class="close-btn">×</button>
+
+          <div class="login-container">
+            <div class="modal-header">
+              <div class="modal-logo">
+                <img src="../images/shop-logo.png" class="logo" />
+                <h2 class="form-title" id="modal-title">LOGIN</h2>
+              </div>
             </div>
+
+            <!-- Login Form -->
+            <div class="login-form" id="loginForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by signing in to your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="../images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR CONTINUE WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Email/Username</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your email or username"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Enter your password"
+                  />
+                </div>
+
+                <div class="form-actions">
+                  <div class="remember-me">
+                    <input
+                      type="checkbox"
+                      id="remember"
+                      class="remember-checkbox"
+                    />
+                    <label for="remember" class="remember-text"
+                      >Remember me</label
+                    >
+                  </div>
+                  <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">LOGIN</button>
+              </form>
+            </div>
+
+            <!-- Signup Form (hidden by default) -->
+            <div class="signup-form" id="signupForm">
+              <p class="subtitle">
+                Enjoy the exclusive benefits by creating your account.
+              </p>
+
+              <div class="social-login">
+                <div class="social-btn">
+                  <img src="../images/facebook.png" alt="facebook" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/instagram.webp" alt="instagram" />
+                </div>
+                <div class="social-btn">
+                  <img src="../images/x-twitter.jpg" alt="x twitter" />
+                </div>
+              </div>
+
+              <div class="divider-form">OR SIGN UP WITH EMAIL</div>
+
+              <form>
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Create a password"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-input"
+                    placeholder="Confirm your password"
+                  />
+                </div>
+
+                <button type="submit" class="submit-btn">SIGN UP</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="signup-container" id="sidebarContainer">
+            <div class="signup-cta" id="loginSidebar">
+              <h3 class="signup-title">NEW HERE?</h3>
+              <p class="signup-text">
+                Sign up and discover a great amount of new opportunities and
+                exclusive offers!
+              </p>
+              <button class="submit-btn" id="showSignupBtn">SIGN UP</button>
+            </div>
+
+            <div class="signup-cta" id="signupSidebar" style="display: none">
+              <h3 class="login-title">ALREADY HAVE AN ACCOUNT?</h3>
+              <p class="login-text">
+                Login to access your profile and enjoy exclusive benefits!
+              </p>
+              <button class="submit-btn" id="showLoginBtn">LOGIN</button>
+            </div>
+          </div>
         </div>
-        <div class="product-view">
-            <div class="breadcrumb">
-                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#nails">NAILS</a> <span>/</span> <a href="../prod-list\prod-list2.html">NAIL STRENGTHENER</a> <span>/</span>OPI NAIL ENVY
-            </div>
-            <div class="product-detail">
-                <div class="product-gallery">
-                    <div class="main-image">
-                        <img src="../prod-list\prod-img/n_str1.webp" alt="OPI Nail Envy">
-                    </div>
-                    <div class="thumbnails">
-                        <div class="thumbnail active">
-                            <img src="../prod-list\prod-img/n_str1.webp" alt="picture angle 1">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="../prodview-img/pv_nstr1-1.webp" alt="picture angle 2">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="../prodview-img/pv_nstr1-2.webp" alt="picture angle 3">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="../prodview-img/pv_nstr1-3.webp" alt="picture angle 4">
-                        </div>
-                    </div>
-                    <div class="share">
-                        <div class="share-label">SHARE:</div>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com" class="social-icon">
-                                <img src="../images/facebook.png" alt="facebook">
-                            </a>
-                            <a href="https://www.instagram.com/" class="social-icon">
-                                <img src="../images/instagram.webp" alt="instagram">
-                            </a>
-                            <a href="https://x.com/" class="social-icon">
-                                <img src="../images/x-twitter.jpg" alt="x twitter">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h1 class="product-title">OPI Nail Envy</h1>
-                    <div class="product-price"> ₱ 1,105.00</div>
-                    
-                    <div class="product-meta">
-                        <div class="meta-row description-column">
-                            <div class="meta-label">DESCRIPTION:</div>
-                            <p> Say hellooo to the next generation of Nail Envy® nail strengtheners, now with Tri-Flex Technology™, a liquid shield that reinforces the nail with layer-building strength.</p>
-                        </div>
-                        <div class="meta-row">
-                            <div class="meta-label">SHIPPING:</div>
-                            <p>2-3 Days</p>
-                        </div>
-                        
-                        <div class="meta-row">
-                            <div class="meta-label">OPTION:</div>
-                            <div class="meta-value">
-                                <div class="size-options">
-                                    <div class="size-option active">15ml</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="meta-row">
-                            <div class="meta-label">QUANTITY:</div>
-                            <div class="meta-value">
-                                <div class="quantity-selector">
-                                    <button class="quantity-button">-</button>
-                                    <input type="text" class="quantity-input" value="1">
-                                    <button class="quantity-button">+</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-actions">
-                        <button class="btn btn-primary">ADD TO CART</button>
-                        <button class="btn btn-secondary">BUY NOW</button>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="product-view">
+        <div class="breadcrumb">
+          <a href="../product.html">PRODUCTS</a> <span>/</span>
+          <a href="../product.html#nails">NAILS</a> <span>/</span>
+          <a href="../prod-list\prod-list2.html">NAIL STRENGTHENER</a>
+          <span>/</span>OPI NAIL ENVY
         </div>
+        <div class="product-detail">
+          <div class="product-gallery">
+            <div class="main-image" id="main-image">
+              <img
+                src="../prod-list\prod-img/n_str1.webp"
+                alt="OPI Nail Envy"
+              />
+            </div>
+            <div class="thumbnails">
+              <div class="thumbnail active" id="image1">
+                <img
+                  src="../prod-list\prod-img/n_str1.webp"
+                  alt="picture angle 1"
+                />
+              </div>
+              <div class="thumbnail" id="image2">
+                <img
+                  src="../prodview-img/pv_nstr1-1.webp"
+                  alt="picture angle 2"
+                />
+              </div>
+              <div class="thumbnail" id="image3">
+                <img
+                  src="../prodview-img/pv_nstr1-2.webp"
+                  alt="picture angle 3"
+                />
+              </div>
+              <div class="thumbnail" id="image4" style="display: none">
+                <img
+                  src="../prodview-img/pv_nstr1-3.webp"
+                  alt="picture angle 4"
+                />
+              </div>
+            </div>
+            <div class="share">
+              <div class="share-label">SHARE:</div>
+              <div class="social-icons">
+                <a href="https://www.facebook.com" class="social-icon">
+                  <img src="../images/facebook.png" alt="facebook" />
+                </a>
+                <a href="https://www.instagram.com/" class="social-icon">
+                  <img src="../images/instagram.webp" alt="instagram" />
+                </a>
+                <a href="https://x.com/" class="social-icon">
+                  <img src="../images/x-twitter.jpg" alt="x twitter" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">OPI Nail Envy</h1>
+            <div class="product-rating">
+              <span class="rate">4.0</span>
+              <span class="star"><i class="fas fa-star"></i></span>
+              <span class="star"><i class="fas fa-star"></i></span>
+              <span class="star"><i class="fas fa-star"></i></span>
+              <span class="star"><i class="fas fa-star"></i></span>
+              <span class="star"><i class="far fa-star"></i></span>
+            </div>
+            <div class="product-price">₱ 1,105.00</div>
+            <input type="text" id="price" value="1,105"></input>
+
+            <div class="product-meta">
+              <div class="meta-row description-column">
+                <div class="meta-label">DESCRIPTION:</div>
+                <p>
+                  Say hellooo to the next generation of Nail Envy® nail
+                  strengtheners, now with Tri-Flex Technology™, a liquid shield
+                  that reinforces the nail with layer-building strength.
+                </p>
+              </div>
+              <div class="meta-row">
+                <div class="meta-label">SHIPPING:</div>
+                <p>2-3 Days</p>
+              </div>
+
+              <div class="meta-row">
+                <div class="meta-label" id="option">Color:</div>
+                <div class="meta-value">
+                  <div class="size-options">
+                    <div
+                      class="size-option active"
+                      id="option1"
+                      onclick="activeOption1(this)"
+                    >
+                      0.1
+                    </div>
+                    <div
+                      class="size-option"
+                      id="option2"
+                      onclick="activeOption2(this)"
+                    >
+                      0.2
+                    </div>
+                    <div
+                      class="size-option"
+                      id="option3"
+                      onclick="activeOption3(this)"
+                    >
+                      0.3
+                    </div>
+                    <div id="option4"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="meta-row">
+                <div class="meta-label">QUANTITY</div>
+                <div class="meta-value">
+                  <div class="quantity-selector">
+                    <button class="quantity-button" id="quantity-decrease">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="quantity-input"
+                      value="1"
+                      id="quantity"
+                    />
+                    <button class="quantity-button" id="quantity-increase">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-actions">
+              <button
+                class="btn btn-primary" onclick="addToCart('OPI Nail Envy')"
+              >
+                ADD TO CART
+              </button>
+              <button
+                class="btn btn-secondary"
+                onclick="buyNow('OPI Nail Envy')"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-review-section">
+        <div class="review-header" id="reviewToggle">
+          <h3>Customer Feedback</h3>
+          <div class="toggle-icon">▼</div>
+        </div>
+        <div class="review-content" id="reviewContent">
+          <div class="customer-review-input">
+            <form>
+              <label>Comment</label>
+              <textarea placeholder="Enter Your Review Here"></textarea>
+            </form>
+            <div class="lower-review">
+              <div class="lower-review-star">
+                <p>Rate this product:</p>
+                <div class="review-stars">
+                  <span class="star"><i class="fas fa-star"></i></span>
+                  <span class="star"><i class="fas fa-star"></i></span>
+                  <span class="star"><i class="fas fa-star"></i></span>
+                  <span class="star"><i class="fas fa-star"></i></span>
+                  <span class="star"><i class="fas fa-star"></i></span>
+                </div>
+              </div>
+              <button>Send</button>
+            </div>
+          </div>
+
+          <div class="customer-review">
+            <div class="review-info">
+              <img src="../images/user.png" alt="user image" />
+              <div class="reviewer-name">Sarah M.</div>
+              <div class="review-date">April 12, 2025</div>
+              <div class="review-stars">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+              </div>
+            </div>
+            <div class="review-text">
+              <p>
+                This OPI Nail Envy is amazing! The color stays vibrant for weeks
+                and doesn't chip easily. Definitely worth the price!
+              </p>
+            </div>
+          </div>
+
+          <div class="customer-review">
+            <div class="review-info">
+              <img src="../images/user.png" alt="user image" />
+              <div class="reviewer-name">Jessica L.</div>
+              <div class="review-date">March 30, 2025</div>
+              <div class="review-stars">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+              </div>
+            </div>
+            <div class="review-text">
+              <p>
+                The color is gorgeous but I found it takes a bit longer to dry
+                than other nail polishes I've used. Still, the quality is good
+                overall.
+              </p>
+            </div>
+          </div>
+
+          <div class="customer-review">
+            <div class="review-info">
+              <img src="../images/user.png" alt="user image" />
+              <div class="reviewer-name">Michael T.</div>
+              <div class="review-date">March 15, 2025</div>
+              <div class="review-stars">
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="fas fa-star"></i></span>
+                <span class="star"><i class="far fa-star"></i></span>
+              </div>
+            </div>
+            <div class="review-text">
+              <p>
+                Bought this for my wife and she absolutely loves it. The brush
+                makes application easy and the finish is very professional
+                looking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-
-  <footer>
-      <div class="footer-section">
-          <h3>Information</h3>
-          <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Terms and Services</a></li>
-              <li><a href="#">Privacy and Policy</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>Products</h3>
-          <ul>
-              <li><a href="#">Nails</a></li>
-              <li><a href="#">Hair</a></li>
-              <li><a href="#">Skincare</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>Services</h3>
-          <ul>
-              <li><a href="#">Manicure</a></li>
-              <li><a href="#">Hair</a></li>
-              <li><a href="#">Pedicure</a></li>
-              <li><a href="#">Makeup</a></li>
-              <li><a href="#">Eyelash</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>Stay Connected</h3>
-          <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
-          <form class="subscription-form">
-              <input type="email" placeholder="Your Email">
-              <button type="submit">Subscribe</button>
-          </form>
-      </div>
-      <div class="footer-section">
-      </div>
-      <div class="footer-section">
-          <h3>Visit Us</h3>
-          <p>123 Elegance Avenue</p>
-          <p>Luxury District, City</p>
-          <p>ZIP Code</p>
-      </div>
-      <div class="footer-section">
-          <h3>Working Hours</h3>
-          <p>Monday - Friday: 8:00AM - 7:00PM</p>
-          <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
-      </div>
-  </footer>
-</body>
-<script src="../script/script.js"></script>
+    <footer>
+        <div class="footer-section">
+            <h3>Information</h3>
+            <ul>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../faq.html">Terms and Services</a></li>
+                <li><a href="../faq.html">Privacy and Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="../product.html#nails">Nails</a></li>
+                <li><a href="../product.html#hair">Hair</a></li>
+                <li><a href="../product.html#skincare">Skincare</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="../services.html#manicure">Manicure</a></li>
+                <li><a href="../services.html#hair">Hair</a></li>
+                <li><a href="../services.html#pedicure">Pedicure</a></li>
+                <li><a href="../services.html#makeup">Makeup</a></li>
+                <li><a href="../services.html#eyelashes">Eyelash</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Stay Connected</h3>
+            <p>Subscribe to get exclusive offers, beauty tips, and the latest updates straight to your inbox.</p>
+            <form class="subscription-form">
+                <input type="email" placeholder="Your Email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section">
+        </div>
+        <div class="footer-section">
+            <h3>Visit Us</h3>
+            <p>123 Elegance Avenue</p>
+            <p>Quezon City</p>
+            <p>0909</p>
+        </div>
+        <div class="footer-section">
+            <h3>Working Hours</h3>
+            <p>Monday - Friday: 8:00AM - 7:00PM</p>
+            <p>Saturday - Sunday: 10:00AM - 5:00PM</p>
+        </div>
+      </footer>
+  </body>
+  <script src="../script/modal.js"></script>
+  <script src="../script/product-view.js"></script>
+  <script src="../script/cart.js"></script>
 </html>

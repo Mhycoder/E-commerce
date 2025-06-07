@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/nav-footer.css">
     <link rel="stylesheet" href="../css/product-view.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Product Name</title>
 </head>
 <body>
@@ -29,8 +30,8 @@
             <a href="../faq.html">FAQ</a>
         </div>
         <div class="nav-icons">
-            <a><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-            <a href="../cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+            <a><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
+            <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
         </div>
     </nav>        
   </header>
@@ -145,26 +146,30 @@
         </div>
         <div class="product-view">
             <div class="breadcrumb">
-                <a href="#">PRODUCTS</a> <span>/</span> <a href="#">CATEGORY</a> <span>/</span> <a href="#">TYPE OF PRODUCT</a> <span>/</span> PRODUCT NAME
+                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#hair">HAIR</a> <span>/</span> <a href="../prod-list\prod-list13.html">HAIR SPRAY</a> <span>/</span> MOROCCANOIL LUMINOUS HAIRSPRAY STRONG
+
+
             </div>
             <div class="product-detail">
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="#" alt="main image">
+                        <img src="../prod-list\prod-img/spray3.webp" alt="MOROCCANOIL Luminous Hairspray Strong">
                     </div>
                     <div class="thumbnails">
-                        <div class="thumbnail active">
-                            <img src="#" alt="picture angle 1">
+                        <div class="thumbnail active" id="image1">
+                            <img src="../prod-list/prod-img/spray3.webp" alt="picture angle 1">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 2">
+                        <div class="thumbnail" id="image2">
+                            <img src="../prodview-img/pv_hspray3-1.webp" alt="picture angle 2">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 3">
+                         <div class="thumbnail" id="image3">
+                            <img src="../prodview-img/pv_hspray3-2.webp" alt="picture angle 3">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 4">
+                        <div class="thumbnail" id="image4">
+                            <img src="../prodview-img/pv_hspray3-3.jpg" alt="picture angle 3">
                         </div>
+
+                  
                     </div>
                     <div class="share">
                         <div class="share-label">SHARE:</div>
@@ -182,26 +187,36 @@
                     </div>
                 </div>
                 <div class="product-info">
-                    <h1 class="product-title">Product Name</h1>
-                    <div class="product-price">₱ 9,999</div>
+                    <h1 class="product-title">MOROCCANOIL Luminous Hairspray Strong</h1>
+                    <div class="product-rating">
+                        <span class="rate">4.0</span>
+                        <span class="star"><i class="fas fa-star"></i></span>
+                        <span class="star"><i class="fas fa-star"></i></span>
+                        <span class="star"><i class="fas fa-star"></i></span>
+                        <span class="star"><i class="fas fa-star"></i></span>
+                        <span class="star"><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="product-price">₱ 600.00</div>
+                    <input type="text" id="price" value="600"></input>
                     
                     <div class="product-meta">
                         <div class="meta-row description-column">
-                            <div class="meta-label">DESCRIPTION</div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ullam tenetur reiciendis! Consequatur ullam animi assumenda tempore ducimus, tempora culpa, vel sunt blanditiis non asperiores veniam enim obcaecati. Consequuntur, ducimus.</p>
+                            <div class="meta-label">DESCRIPTION:</div>
+                            <p> An argan oil-infused, anti-frizz hairspray with moveable but firm hold.</p>
                         </div>
                         <div class="meta-row">
-                            <div class="meta-label">SHIPPING</div>
+                            <div class="meta-label">SHIPPING:</div>
                             <p>2-3 Days</p>
                         </div>
                         
                         <div class="meta-row">
-                            <div class="meta-label">SIZE</div>
+                            <div class="meta-label" id="option">Color:</div>
                             <div class="meta-value">
                                 <div class="size-options">
-                                    <div class="size-option active">S</div>
-                                    <div class="size-option">M</div>
-                                    <div class="size-option">L</div>
+                                    <div class="size-option active" id="option1" onclick="activeOption1(this)">0.1</div>
+                                    <div class="size-option" id="option2" onclick="activeOption2(this)">0.2</div>
+                                    <div class="size-option" id="option3" onclick="activeOption3(this)">0.3</div>
+                                    <div id="option4"></div>
                                 </div>
                             </div>
                         </div>
@@ -209,18 +224,100 @@
                             <div class="meta-label">QUANTITY</div>
                             <div class="meta-value">
                                 <div class="quantity-selector">
-                                    <button class="quantity-button">-</button>
-                                    <input type="text" class="quantity-input" value="1">
-                                    <button class="quantity-button">+</button>
+                                    <button class="quantity-button" id="quantity-decrease">-</button>
+                                    <input type="text" class="quantity-input" value="1" id="quantity">
+                                    <button class="quantity-button" id="quantity-increase">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-actions">
-                        <button class="btn btn-primary">ADD TO CART</button>
-                        <button class="btn btn-secondary">BUY NOW</button>
+                        <button class="btn btn-primary" onclick="addToCart('MOROCCANOIL Luminous Hairspray Strong')">ADD TO CART</button>
+                        <button class="btn btn-secondary" onclick="buyNow('MOROCCANOIL Luminous Hairspray Strong')">BUY NOW</button>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="product-review-section">
+            <div class="review-header" id="reviewToggle">
+                <h3>Customer Feedback</h3>
+                <div class="toggle-icon">▼</div>
+            </div>
+            <div class="review-content" id="reviewContent">
+                <div class="customer-review-input">
+                    <form>
+                        <label>Comment</label>
+                        <textarea>Enter Your Review Here</textarea>
+                    </form>
+                    <div class="lower-review">
+                        <div class="lower-review-star">
+                            <p>Rate this product:</p>
+                            <div class="review-stars">
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                                <span class="star"><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                        <button>Send</button>
+                    </div>
+                </div>
+                
+                <div class="customer-review">
+                    <div class="review-info">
+                        <img src="../images/user.png" alt="user image">
+                        <div class="reviewer-name">Sarah M.</div>
+                        <div class="review-date">April 12, 2025</div>
+                        <div class="review-stars">
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>This Revlon Super Lustrous™ Nail Enamel is amazing! The color stays vibrant for weeks and doesn't chip easily. Definitely worth the price!</p>
+                    </div>
+                </div>
+                
+                <div class="customer-review">
+                    <div class="review-info">
+                        <img src="../images/user.png" alt="user image">
+                        <div class="reviewer-name">Jessica L.</div>
+                        <div class="review-date">March 30, 2025</div>
+                        <div class="review-stars">
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="far fa-star"></i></span>
+                            <span class="star"><i class="far fa-star"></i></span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>The color is gorgeous but I found it takes a bit longer to dry than other nail polishes I've used. Still, the quality is good overall.</p>
+                    </div>
+                </div>
+                
+                <div class="customer-review">
+                    <div class="review-info">
+                        <img src="../images/user.png" alt="user image">
+                        <div class="reviewer-name">Michael T.</div>
+                        <div class="review-date">March 15, 2025</div>
+                        <div class="review-stars">
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="fas fa-star"></i></span>
+                            <span class="star"><i class="far fa-star"></i></span>
+                        </div>
+                    </div>  
+                    <div class="review-text">
+                        <p>Bought this for my wife and she absolutely loves it. The brush makes application easy and the finish is very professional looking.</p>
+                    </div>
+                </div>                
             </div>
         </div>
     </main>
@@ -276,5 +373,7 @@
       </div>
   </footer>
 </body>
-<script src="../script/script.js"></script>
+<script src="../script/modal.js"></script>
+<script src="../script/product-view.js"></script>
+<script src="../script/cart.js"></script>
 </html>

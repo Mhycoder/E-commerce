@@ -29,8 +29,8 @@
             <a href="../faq.html">FAQ</a>
         </div>
         <div class="nav-icons">
-            <a><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-            <a href="../cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+            <a><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
+            <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
         </div>
     </nav>        
   </header>
@@ -145,80 +145,83 @@
         </div>
         <div class="product-view">
             <div class="breadcrumb">
-                <a href="#">PRODUCTS</a> <span>/</span> <a href="#">CATEGORY</a> <span>/</span> <a href="#">TYPE OF PRODUCT</a> <span>/</span> PRODUCT NAME
+                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#hair">HAIR</a> <span>/</span> <a href="../prod-list\prod-list14.html">HAIR MOUSSE</a> <span>/</span> OUAI AIR DRY FOAM
+
+
             </div>
             <div class="product-detail">
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="#" alt="main image">
+                        <img src="../prod-list\prod-img/Mousse4.webp" alt="Ouai Air Dry Foam">
                     </div>
                     <div class="thumbnails">
-                        <div class="thumbnail active">
-                            <img src="#" alt="picture angle 1">
+                        <div class="thumbnail active" id="image1">
+                            <img src="../prod-list/prod-img/Mousse4.webp" alt="picture angle 1">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 2">
+                        <div class="thumbnail" id="image2">
+                            <img src="../prodview-img/pv_hmousse4-1.webp" alt="picture angle 2">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 3">
+                         <div class="thumbnail" id="image3">
+                            <img src="../prodview-img/pv_hmousse4-2.webp" alt="picture angle 3">
                         </div>
-                        <div class="thumbnail">
-                            <img src="#" alt="picture angle 4">
+                        <div class="thumbnail" id="image4">
+                            <img src="../prodview-img/pv_hmousse4-3.webp" alt="picture angle 3">
                         </div>
+
+                  
                     </div>
                     <div class="share">
                         <div class="share-label">SHARE:</div>
                         <div class="social-icons">
                             <a href="#" class="social-icon">
-                                <img src="#" alt="facebook">
+                                <img src="../images/facebook.png" alt="facebook">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="#" alt="instagram">
+                                <img src="../images/instagram.webp" alt="instagram">
                             </a>
                             <a href="#" class="social-icon">
-                                <img src="#" alt="x twitter">
+                                <img src="../images/x-twitter.jpg" alt="x twitter">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h1 class="product-title">Product Name</h1>
-                    <div class="product-price">₱ 9,999</div>
+                    <h1 class="product-title">Ouai Air Dry Foam</h1>
+                    <div class="product-price">₱ 1, 990.00</div>
+                    <input type="text" id="price" value="1990"></input>
                     
                     <div class="product-meta">
                         <div class="meta-row description-column">
-                            <div class="meta-label">DESCRIPTION</div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit ullam tenetur reiciendis! Consequatur ullam animi assumenda tempore ducimus, tempora culpa, vel sunt blanditiis non asperiores veniam enim obcaecati. Consequuntur, ducimus.</p>
+                            <div class="meta-label">DESCRIPTION:</div>
+                            <p>A wash-and-wear air-dry foam that creates effortless, weightless waves instantly. This foam is great for conditioning and detangling the hair while creating instant waves.</p>
                         </div>
                         <div class="meta-row">
-                            <div class="meta-label">SHIPPING</div>
+                            <div class="meta-label">SHIPPING:</div>
                             <p>2-3 Days</p>
                         </div>
                         
                         <div class="meta-row">
-                            <div class="meta-label">SIZE</div>
+                            <div class="meta-label">SIZE:</div>
                             <div class="meta-value">
                                 <div class="size-options">
-                                    <div class="size-option active">S</div>
-                                    <div class="size-option">M</div>
-                                    <div class="size-option">L</div>
-                                </div>
+                                    <div class="size-option active">120 ml</div>
+                            </div>
                             </div>
                         </div>
-                        <div class="meta-row">
-                            <div class="meta-label">QUANTITY</div>
+                         <div class="meta-row">
+                            <div class="meta-label">QUANTITY:</div>
                             <div class="meta-value">
                                 <div class="quantity-selector">
-                                    <button class="quantity-button">-</button>
-                                    <input type="text" class="quantity-input" value="1">
-                                    <button class="quantity-button">+</button>
+                                    <button class="quantity-button" id="quantity-decrease">-</button>
+                                    <input type="text" class="quantity-input" value="1" id="quantity">
+                                    <button class="quantity-button" id="quantity-increase">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-actions">
-                        <button class="btn btn-primary">ADD TO CART</button>
-                        <button class="btn btn-secondary">BUY NOW</button>
+                        <button class="btn btn-primary" onclick="addToCart('Ouai Air Dry Foam')">ADD TO CART</button>
+                        <button class="btn btn-secondary" onclick="buyNow('Ouai Air Dry Foam')">BUY NOW</button>
                     </div>
                 </div>
             </div>
@@ -276,5 +279,7 @@
       </div>
   </footer>
 </body>
-<script src="../script/script.js"></script>
+<script src="../script/modal.js"></script>
+<script src="../script/product-view.js"></script>
+<script src="../script/cart.js"></script>
 </html>

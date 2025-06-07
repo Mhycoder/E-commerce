@@ -29,8 +29,8 @@
             <a href="../faq.html">FAQ</a>
         </div>
         <div class="nav-icons">
-            <a><div class="user-icon" id="userIcon"><img src="images/user.png"></div></a>
-            <a href="../cart.html"><div class="cart-icon"><img src="images/cart.png"></div></a>
+            <a><div class="user-icon" id="userIcon"><img src="../images/user.png"></div></a>
+            <a href="../cart.html"><div class="cart-icon"><img src="../images/cart.png"></div></a>
         </div>
     </nav>        
   </header>
@@ -145,34 +145,36 @@
         </div>
         <div class="product-view">
             <div class="breadcrumb">
-                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#skincare">SKINCARE</a> <span>/</span> <a href="../prod-list\prod-list17.html">CLEANSER</a> <span>/</span>  CERAVE FOAMING CLEANSER
+                <a href="../product.html">PRODUCTS</a> <span>/</span> <a href="../product.html#hair">HAIR</a> <span>/</span> <a href="../prod-list\prod-list16.html">HAIR GEL</a> <span>/</span> DAVINES THIS IS A STRONG HOLD CREAM GEL: FOR FIRM POLISHED LOOKS 
+
+
+
+
             </div>
             <div class="product-detail">
                 <div class="product-gallery">
                     <div class="main-image">
-                        <img src="../prod-list\prod-img/cleanser1.jpg" alt="Cerave Foaming Cleanser">
+                        <img src="../prod-list\prod-img/h_gel4.webp" alt="Davines This is a Strong Hold Cream Gel: For Firm Polished Looks">
                     </div>
                     <div class="thumbnails">
-                        <div class="thumbnail active">
-                            <img src="../prod-list/prod-img/cleanser1.jpg" alt="picture angle 1">
+                        <div class="thumbnail active" id="image1">
+                            <img src="../prod-list/prod-img/h_gel4.webp" alt="picture angle 1">
                         </div>
-                        <div class="thumbnail">
-                            <img src="../prodview-img/pv_clean1-1.jpg" alt="picture angle 2">
+                        <div class="thumbnail" id="image2">
+                            <img src="../prodview-img/pv_gel4-1.webp" alt="picture angle 2">
                         </div>
-                         <div class="thumbnail">
-                            <img src="../prodview-img/pv_clean1-2.jpg" alt="picture angle 3">
+                         <div class="thumbnail" id="image3">
+                            <img src="../prodview-img/pv_gel4-2.webp" alt="picture angle 3">
                         </div>
-                        <div class="thumbnail">
-                            <img src="../prodview-img/pv_clean1-3.jpg" alt="picture angle 3">
+                        <div class="thumbnail" id="image4">
+                            <img src="../prodview-img/pv_gel4-3.jpg" alt="picture angle 4">
                         </div>
-                        <div class="thumbnail">
-                            <img src="../prodview-img/pv_clean1-4.jpg" alt="picture angle 3">
-                        </div>
+                      
                     </div>
                     <div class="share">
                         <div class="share-label">SHARE:</div>
                         <div class="social-icons">
-                           <a href="#" class="social-icon">
+                            <a href="#" class="social-icon">
                                 <img src="../images/facebook.png" alt="facebook">
                             </a>
                             <a href="#" class="social-icon">
@@ -185,13 +187,14 @@
                     </div>
                 </div>
                 <div class="product-info">
-                    <h1 class="product-title">Cerave Foaming Cleanser</h1>
-                    <div class="product-price"> ₱ 655.00</div>
+                    <h1 class="product-title">Davines This is a Strong Hold Cream Gel: For Firm Polished Looks</h1>
+                    <div class="product-price">₱ 1, 300.00</div>
+                    <input type="text" id="price" value="1300"></input>
                     
                     <div class="product-meta">
                         <div class="meta-row description-column">
                             <div class="meta-label">DESCRIPTION:</div>
-                            <p>Purifying and sebum-regulating, Cerave Foaming Cleanser is a foaming cleansing gel for normal, combination and oily skin.A formula that promotes deep cleansing, while preserving the skin’s essential balance. Ideal for normal to oily skin.</p>
+                            <p> This Davines This is a Strong Hold Cream Gel 125 mL is a pearly and elastic cream gel with strong hold.The formula is paraben-free and with no added colourings.</p>
                         </div>
                         <div class="meta-row">
                             <div class="meta-label">SHIPPING:</div>
@@ -202,24 +205,25 @@
                             <div class="meta-label">SIZE:</div>
                             <div class="meta-value">
                                 <div class="size-options">
-                                    <div class="size-option ">236 ml</div>
-                                </div>
+                                    <div class="size-option active">125 ml</div>
+                                   
+                            </div>
                             </div>
                         </div>
-                        <div class="meta-row">
+                         <div class="meta-row">
                             <div class="meta-label">QUANTITY:</div>
                             <div class="meta-value">
                                 <div class="quantity-selector">
-                                    <button class="quantity-button">-</button>
-                                    <input type="text" class="quantity-input" value="1">
-                                    <button class="quantity-button">+</button>
+                                    <button class="quantity-button" id="quantity-decrease">-</button>
+                                    <input type="text" class="quantity-input" value="1" id="quantity">
+                                    <button class="quantity-button" id="quantity-increase">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-actions">
-                        <button class="btn btn-primary">ADD TO CART</button>
-                        <button class="btn btn-secondary">BUY NOW</button>
+                        <button class="btn btn-primary" onclick="addToCart('Davines This is a Strong Hold Cream Gel: For Firm Polished Looks')">ADD TO CART</button>
+                        <button class="btn btn-secondary" onclick="buyNow('Davines This is a Strong Hold Cream Gel: For Firm Polished Looks')">BUY NOW</button>
                     </div>
                 </div>
             </div>
@@ -277,5 +281,7 @@
       </div>
   </footer>
 </body>
-<script src="../script/script.js"></script>
+<script src="../script/modal.js"></script>
+<script src="../script/product-view.js"></script>
+<script src="../script/cart.js"></script>
 </html>
