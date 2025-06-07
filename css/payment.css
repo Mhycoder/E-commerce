@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.payment-methods {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.payment-methods h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.lower-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.card.default {
+  border: 4px solid var(--accent);
+  position: relative;
+}
+
+.default-badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: var(--accent);
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.payment {
+  width: 50%;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.payment-header {
+  width: 100%;
+  background-color: var(--accent);
+  color: var(--text-light);
+  padding: 12px 24px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.transaction-history {
+  width: 30%;
+  border-radius: 12px;
+  background-color: white;
+  padding: 24px;
+}
+
+.transaction-history-nomodal {
+  height: 100%;
+}
+
+.transaction-modal {
+  border-radius: 8px;
+  box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  width: 100%;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: var(--primary);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title {
+  color: var(--accent);
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.card-actions a {
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-row div {
+  padding: 2px 12px;
+  background-color: white;
+  color: var(--text-dark);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transaction-modal {
+  width: 500px;
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-header p {
+  cursor: pointer;
+}
+
+.transaction-container {
+  margin-top: 32px;
+}
+
+.transaction-container button {
+  width: 100%;
+  margin-top: 24px;
+  background-color: var(--accent);
+  color: var(--text-light);
+  padding: 12px 0;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+
+.transaction-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transaction-items div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-items div div {
+  flex-direction: column;
+}
+
+.transaction-items .item-divider {
+  margin-top: 12px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.transaction-items div div p {
+  font-size: 12px;
+  color: gray;
+  margin-top: 4px;
+}
+
+.card-container {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.add-card {
+  width: 100%;
+  border-radius: 8px;
+  padding: 32px;
+  background-color: white;
+  color: var(--accent);
+  border: 2px dashed var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-card:hover {
+  background-color: rgba(240, 169, 180, 0.1);
+}
+
+.add-card div {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--text-light);
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-modal {
+  position: relative;
+  width: 100%;
+  display: none;
+  z-index: 9999;
+}
+
+.payment-modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.payment-modal-header p {
+  cursor: pointer;
+}
+
+.payment-modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  background-color: white;
+}
+
+.payment-modal-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-modal-container form input,
+.payment-modal-container form select {
+  height: 32px;
+}
+
+.payment-modal-container form div {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.payment-modal-container .expiry-date,
+.payment-modal-container .cvv {
+  width: 50%;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.btn {
+  margin-top: 24px;
+  width: 50%;
+  background-color: var(--accent);
+  color: var(--text-light);
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn:hover {
+  background-color: var(--accent-dark);
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .payment-modal-container {
+    top: 50%;
+    left: 50%;
+  }
+
+  .lower-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment,
+  .transaction-history-nomodal {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .transaction-modal {
+    left: 17%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .transaction-modal {
+    left: 10%;
+  }
+
+  .payment-modal-container {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .transaction-modal {
+    width: 300px;
+    left: 10%;
+  }
+
+  .payment-modal-container {
+    width: 310px;
+  }
+}

@@ -72,7 +72,11 @@ section {
 .category ul li a:hover {
     color: var(--accent);
 }
-        
+      
+.category ul li .active {
+    color: var(--accent);
+}
+
 .products-grid {
     border-radius: 8px;
     padding: 50px;
@@ -217,7 +221,7 @@ section {
     }
             
     .product-card {
-        height: 340px;
+        height: 400px;
     }
             
     .product-image {
